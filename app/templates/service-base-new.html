@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Cloud Commercial Holdings LLC{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{% block meta_description %}Cloud Commercial Holdings LLC provides professional IT services and solutions.{% endblock %}">
+  <meta property="og:title" content="{% block og_title %}Cloud Commercial Holdings LLC{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}Cloud Commercial Holdings LLC provides professional IT services and solutions.{% endblock %}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/static/cch.jpg">
+  <meta property="og:url" content="{% block og_url %}/{% endblock %}">
+  <link rel="icon" type="image/jpeg" href="/static/cch.jpg">
+  
+  <!-- Font preloading for critical fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" as="style">
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr73w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC73w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- Load all fonts with font-display:swap strategy -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Oswald:wght@600;700&family=Roboto+Slab:wght@400;700&display=swap&font-display=swap" rel="stylesheet">
+  
+  <!-- Add font-display property in CSS -->
+  <style>
+    /* Font loading optimization */
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: local('Montserrat');
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: local('Montserrat');
+    }
+    
+    /* Apply system font stack first for immediate text rendering */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    }
+    
+    /* Prevent layout shifts by setting explicit font sizes */
+    .clip-text, h1, h2, h3, h4, h5, h6 {
+      font-size-adjust: 0.5;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/service-pages.css">
+  <link rel="stylesheet" href="/static/enhanced-service-pages.css">
+  <link rel="stylesheet" href="/static/enhanced-service-footer.css">
+  <link rel="stylesheet" href="/static/enhanced-visual-services.css">
+  <link rel="stylesheet" href="/static/cloud-section.css">
+  {% block head %}{% endblock %}
+</head>
+<body class="service-page service-page--{% block service_type %}default{% endblock %}">
+
+<!-- Top navigation bar -->
+<div class="topbar topbar--transparent">
+  <div class="topbar-left">
+    <a href="/" class="logo-mark" aria-label="Cloud Commercial Holdings" title="Home">
+      <img src="/static/CCHLogoTwoTransparent.png" alt="Cloud Commercial Holdings logo" class="logo-mark-img" />
+    </a>
+  </div>
+  <div class="topbar-right">
+    <a class="cta-pill" href="/contact">Let's Talk</a>
+    <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-controls="menuOverlay" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+
+<!-- Fullscreen overlay menu -->
+<div id="menuOverlay" class="overlay-menu" aria-hidden="true">
+  <button class="overlay-close" id="menuClose" aria-label="Close menu">×</button>
+  <ul class="overlay-list">
+    <li><a href="/about">Who We Are</a></li>
+    <li><a href="/services">What We Do</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contact">Contact Us</a></li>
+  </ul>
+</div>
+
+<main class="service-main">
+  {% block service_content %}{% endblock %}
+</main>
+
+<!-- Cloud Section -->
+{% block cloud_section %}
+<section class="cloud-section">
+  <div class="cloud-section-container">
+    <!-- Empty section for cloud testimonials -->
+  </div>
+</section>
+{% endblock %}
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-left">
+      <div class="logo-mark" aria-hidden="true">
+        <img src="/static/CCHLogoTwoTransparent.png" alt="CCH logo" class="logo-mark-img" />
+      </div>
+    </div>
+
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="/about">Who We Are</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Maryland, 20702</p>
+        <p><a href="mailto:info@cloudcommercial.com">info@cloudcommercial.com</a></p>
+        <p>(703) 201-6540</p>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer-bottom">
+    <div class="container">
+      <div class="footer-certifications">
+        <a href="https://twitter.com" target="_blank"><img src="/static/twitter.svg" alt="Twitter" class="footer-icon" /></a>
+        <a href="https://youtube.com" target="_blank"><img src="/static/youtube.svg" alt="YouTube" class="footer-icon" /></a>
+        <a href="https://linkedin.com" target="_blank"><img src="/static/linkedin.svg" alt="LinkedIn" class="footer-icon" /></a>
+        <a href="https://instagram.com" target="_blank"><img src="/static/instagram.svg" alt="Instagram" class="footer-icon" /></a>
+      </div>
+      <div class="copyright">&copy; Cloud Commercial Holdings LLC. All Rights Reserved 2025.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="/static/main.js"></script>
+
+</body>
+</html>

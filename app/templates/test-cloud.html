@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #4F46E5; /* Health service color */
+        }
+        
+        .cloud-section {
+            width: 100%;
+            min-height: 240px;
+            padding: 40px 0 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cloud-section-container {
+            max-width: 1200px;
+            height: 200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-cloud {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            top: 60%;
+            transform: translateY(-50%);
+            z-index: 2;
+            pointer-events: all;
+            opacity: 1; /* Set to visible for testing */
+            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+            cursor: pointer;
+            left: 50%; /* Center cloud */
+            margin-left: -175px; /* Half of width */
+            
+            /* Cloud shape with direct background */
+            background-image: url('/static/cloud.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: white;
+        }
+        
+        .section-cloud-inner {
+            position: relative;
+            padding: 25px 40px 30px;
+            background: transparent;
+            max-width: 350px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .cloud-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #4F46E5;
+        }
+        
+        .cloud-author {
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: block;
+            text-align: right;
+            padding-right: 20px;
+            color: rgba(79, 70, 229, 0.7);
+        }
+        
+        /* Alternative cloud test with SVG mask */
+        .cloud-alt {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            top: 60%;
+            left: 80%;
+            transform: translateY(-50%);
+            background-color: white;
+            -webkit-mask-image: url('/static/cloud.svg');
+            mask-image: url('/static/cloud.svg');
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+        }
+        
+        .cloud-alt-inner {
+            position: relative;
+            padding: 25px 40px 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="cloud-section">
+        <div class="cloud-section-container">
+            <!-- Test cloud with background-image approach -->
+            <div class="section-cloud">
+                <div class="section-cloud-inner">
+                    <p class="cloud-text">"This is a test cloud with background-image approach."</p>
+                    <cite class="cloud-author">— Test Client</cite>
+                </div>
+            </div>
+            
+            <!-- Test cloud with SVG mask approach -->
+            <div class="cloud-alt">
+                <div class="cloud-alt-inner">
+                    <p class="cloud-text">"This is a test cloud with SVG mask approach."</p>
+                    <cite class="cloud-author">— Test Client</cite>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

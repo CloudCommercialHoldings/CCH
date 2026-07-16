@@ -1,0 +1,59 @@
+/* Development Service Footer Customization */
+.service-page--development .site-footer,
+.service-page--development .cloud-section {
+  background-color: #014F46; /* Dark green for development */
+}
+
+.service-page--development .site-footer h4 {
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.service-page--development .site-footer a,
+.service-page--development .site-footer p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.service-page--development .site-footer a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.service-page--development .site-footer-bottom {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Social Media Icons Filter */
+.service-page--development .footer-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Development Features Styling */
+.development-features .feature-enhanced {
+  border-color: rgba(1, 79, 70, 0.2); /* Light version of #014F46 */
+}
+
+.development-features .feature-enhanced:hover {
+  border-color: #014F46;
+  box-shadow: 0 10px 30px rgba(1, 79, 70, 0.1);
+}
+
+.development-features .feature-icon-enhanced {
+  background-color: rgba(1, 79, 70, 0.1); /* Very light version of #014F46 */
+}
+
+/* Cloud Section Styling for Development */
+.service-page--development .cloud-section .section-cloud,
+.service-page--development .cloud-section .filler-cloud {
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+.service-page--development .cloud-section .cloud-text {
+  color: #014F46;
+}
+
+.service-page--development .cloud-section .cloud-author {
+  color: rgba(1, 79, 70, 0.7);
+}

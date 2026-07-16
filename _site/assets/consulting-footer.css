@@ -1,0 +1,59 @@
+/* Consulting Service Footer Customization */
+.service-page--consulting .site-footer,
+.service-page--consulting .cloud-section {
+  background-color: #1A2942; /* Dark blue for consulting */
+}
+
+/* Consulting Features Styling */
+.consulting-features .feature-enhanced {
+  border-color: rgba(26, 41, 66, 0.2); /* Light version of #1A2942 */
+}
+
+.consulting-features .feature-enhanced:hover {
+  border-color: #1A2942;
+  box-shadow: 0 10px 30px rgba(26, 41, 66, 0.1);
+}
+
+.consulting-features .feature-icon-enhanced {
+  background-color: rgba(26, 41, 66, 0.1); /* Very light version of #1A2942 */
+}
+
+/* Cloud Section Styling for Consulting */
+.service-page--consulting .cloud-section .section-cloud,
+.service-page--consulting .cloud-section .filler-cloud {
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+.service-page--consulting .cloud-section .cloud-text {
+  color: #1A2942;
+}
+
+.service-page--consulting .cloud-section .cloud-author {
+  color: rgba(26, 41, 66, 0.7);
+}
+
+.service-page--consulting .site-footer h4 {
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.service-page--consulting .site-footer a,
+.service-page--consulting .site-footer p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.service-page--consulting .site-footer a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.service-page--consulting .site-footer-bottom {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Social Media Icons Filter */
+.service-page--consulting .footer-icon {
+  filter: brightness(0) invert(1);
+}

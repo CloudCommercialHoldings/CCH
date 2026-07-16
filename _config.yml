@@ -1,0 +1,34 @@
+title: Cloud Commercial Holdings LLC
+description: Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.
+baseurl: ""
+url: "https://cloudcommercial.com"
+
+# Exclude these files/directories from the Jekyll build
+exclude:
+  - app/
+  - Makefile
+  - requirements.txt
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .venv/
+  - .git/
+  - .gitattributes
+  - .gitignore
+  - quick-lfs-check.sh
+  - verify-lfs-setup.sh
+  - scripts/
+  - vendor/
+
+# Jekyll configurations
+markdown: kramdown
+permalink: /:title/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "services"
+    values:
+      layout: default # or service if we make a separate one, but default is good.

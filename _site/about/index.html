@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Cloud Commercial Holdings LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.">
+  
+  <meta property="og:title" content="About Us - Cloud Commercial Holdings LLC">
+  <meta property="og:description" content="Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/cch.jpg">
+  <meta property="og:url" content="/about/">
+  <link rel="icon" type="image/jpeg" href="/assets/cch.jpg">
+  
+  <!-- Font preloading for critical fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" as="style">
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr73w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC73w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- Load all fonts with font-display:swap strategy -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Oswald:wght@600;700&family=Roboto+Slab:wght@400;700&display=swap&font-display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  
+    
+      <link rel="stylesheet" href="/assets/style.css">
+    
+      <link rel="stylesheet" href="/assets/topbar-fix.css">
+    
+      <link rel="stylesheet" href="/assets/team.css">
+    
+  
+  
+  <!-- Core Inline styles -->
+  <style>
+    /* Font loading optimization */
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: local('Montserrat');
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: local('Montserrat');
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    }
+    
+    .clip-text, h1, h2, h3, h4, h5, h6 {
+      font-size-adjust: 0.5;
+    }
+    
+    #services, #about, #clients, #contact, footer {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 5000px;
+    }
+  </style>
+  
+  <!-- Font loading detection script -->
+  <script>
+    document.fonts.ready.then(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    });
+    setTimeout(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    }, 1000);
+  </script>
+</head>
+<body class="about-page">
+
+  <!-- Shared topbar + overlay partial -->
+<div class="topbar topbar--transparent">
+    <div class="topbar-left">
+        <a href="/" class="logo-mark" aria-label="Cloud Commercial Holdings" title="Home">
+            <img src="/assets/CCHLogoTwoTransparent.png" alt="Cloud Commercial Holdings logo" class="logo-mark-img" />
+        </a>
+    </div>
+    <div class="topbar-right">
+        <a class="cta-pill" href="/contact">Let's Talk</a>
+        
+        <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-controls="menuOverlay"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        
+    </div>
+</div>
+
+<!-- Fullscreen overlay menu (shared) -->
+<div id="menuOverlay" class="overlay-menu" aria-hidden="true">
+    <button class="overlay-close" id="menuClose" aria-label="Close menu">&times;</button>
+    <ul class="overlay-list">
+        <li><a href="/about">Who We Are</a></li>
+        <li><a href="/services">What We Do</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+    </ul>
+</div>
+
+  <!-- Meet Our Team Section -->
+<section id="meet-our-team" class="section team-section">
+    <div class="container">
+        <div class="team-header">
+            <h2 class="team-title">Meet Our Team</h2>
+            <p class="team-subtitle">Leadership that drives innovation and delivers results</p>
+        </div>
+
+        <div class="team-grid">
+            <!-- Jeff Kessie - CEO/CIO -->
+            <div class="team-tile" data-person="jeff-kessie">
+                <div class="tile-inner">
+                    <div class="tile-image">
+                        <img src="/assets/JeffCEOPic.jpg" alt="Jeff Kessie" />
+                        <div class="tile-overlay"></div>
+                    </div>
+                    <div class="tile-content">
+                        <h3 class="tile-name">Jeff Kessie</h3>
+                        <p class="tile-role">Founder, CEO & Chief Information Officer</p>
+                        <div class="tile-tags">
+                            <span class="tag">Cloud Architecture</span>
+                            <span class="tag">Commercial Information Technology</span>
+                            <span class="tag">Federal IT</span>
+                        </div>
+                    </div>
+                    <div class="tile-arrow">→</div>
+                </div>
+            </div>
+
+            <!-- Future team member placeholder -->
+            <div class="team-tile coming-soon" data-person="coming-soon">
+                <div class="tile-inner">
+                    <div class="tile-image">
+                        <div class="placeholder-avatar">
+                            <span>+</span>
+                        </div>
+                        <div class="tile-overlay"></div>
+                    </div>
+                    <div class="tile-content">
+                        <h3 class="tile-name">Join Our Team</h3>
+                        <p class="tile-role">Partnerships</p>
+                        <div class="tile-tags">
+                            <span class="tag">Opportunities</span>
+                        </div>
+                    </div>
+                    <div class="tile-arrow">→</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Cloud Section with Background Clouds -->
+        <div class="cloud-section">
+            <!-- Background floating clouds -->
+            <div class="background-clouds">
+                <img src="/assets/cloud-shape.svg" alt="" class="bg-cloud bg-cloud-1" />
+                <img src="/assets/cloud-shape.svg" alt="" class="bg-cloud bg-cloud-2" />
+                <img src="/assets/cloud-shape.svg" alt="" class="bg-cloud bg-cloud-3" />
+                <img src="/assets/cloud-shape.svg" alt="" class="bg-cloud bg-cloud-4" />
+            </div>
+
+            <!-- Main Floating Cloud with Motto -->
+            <div class="floating-cloud-wrapper">
+                <img src="/assets/cloud-shape.svg" alt="Cloud" class="cloud-svg" />
+                <div class="cloud-motto-text">
+                    <p>An investment in knowledge pays the best interest. - Benjamin Franklin</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-left">
+            <div class="logo-mark" aria-hidden="true">
+                <img src="/assets/CCHLogoTwoTransparent.png" alt="CCH logo" class="logo-mark-img" />
+            </div>
+        </div>
+
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="/about">Who We Are</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Maryland, 20702</p>
+                <p><a href="mailto:info@cloudcommercial.com">info@cloudcommercial.com</a></p>
+                <p>(703) 201-6540</p>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer-bottom">
+        <div class="container">
+            <div class="footer-certifications">
+                <a href="https://twitter.com" target="_blank"><img src="/assets/twitter.svg" alt="Twitter"
+                        class="footer-icon" /></a>
+                <a href="https://youtube.com" target="_blank"><img src="/assets/youtube.svg" alt="YouTube"
+                        class="footer-icon" /></a>
+                <a href="https://linkedin.com" target="_blank"><img src="/assets/linkedin.svg" alt="LinkedIn"
+                        class="footer-icon" /></a>
+                <a href="https://instagram.com" target="_blank"><img src="/assets/instagram.svg" alt="Instagram"
+                        class="footer-icon" /></a>
+            </div>
+            <div class="copyright">&copy; Cloud Commercial Holdings LLC. All Rights Reserved 2026.</div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Scripts -->
+  
+    
+      <script src="/assets/main.js"></script>
+    
+      <script src="/assets/topbar-fix.js"></script>
+    
+      <script src="/assets/team-navigation.js"></script>
+    
+  
+  
+  <!-- Font loading optimization script -->
+  <script>
+    if ('fonts' in document) {
+      Promise.all([
+        document.fonts.load('800 1em Montserrat'),
+        document.fonts.load('900 1em Montserrat')
+      ]).then(() => {
+        document.documentElement.classList.add('fonts-loaded');
+      }).catch(err => {
+        console.log('Font loading error:', err);
+        document.documentElement.classList.add('fonts-loaded');
+      });
+      
+      document.fonts.ready.then(() => {
+        document.documentElement.classList.add('all-fonts-ready');
+      });
+    } else {
+      setTimeout(() => {
+        document.documentElement.classList.add('fonts-loaded');
+        document.documentElement.classList.add('all-fonts-ready');
+      }, 500);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Services - Cloud Commercial Holdings LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.">
+  
+  <meta property="og:title" content="Our Services - Cloud Commercial Holdings LLC">
+  <meta property="og:description" content="Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/cch.jpg">
+  <meta property="og:url" content="/services/">
+  <link rel="icon" type="image/jpeg" href="/assets/cch.jpg">
+  
+  <!-- Font preloading for critical fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" as="style">
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr73w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC73w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- Load all fonts with font-display:swap strategy -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Oswald:wght@600;700&family=Roboto+Slab:wght@400;700&display=swap&font-display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  
+    
+      <link rel="stylesheet" href="/assets/style.css">
+    
+      <link rel="stylesheet" href="/assets/services-cards.css">
+    
+      <link rel="stylesheet" href="/assets/fullpage-carousel.css">
+    
+      <link rel="stylesheet" href="/assets/services-carousel-fixes.css">
+    
+      <link rel="stylesheet" href="/assets/hero-carousel.css">
+    
+      <link rel="stylesheet" href="/assets/topbar-fix.css">
+    
+      <link rel="stylesheet" href="/assets/services-gif-fixes.css">
+    
+      <link rel="stylesheet" href="/assets/carousel-slide-links.css">
+    
+      <link rel="stylesheet" href="/assets/carousel-touchpad.css">
+    
+      <link rel="stylesheet" href="/assets/carousel-speed-fix.css">
+    
+      <link rel="stylesheet" href="/assets/service-icons-fix.css">
+    
+      <link rel="stylesheet" href="/assets/large-icons.css">
+    
+      <link rel="stylesheet" href="/assets/carousel-transitions.css">
+    
+      <link rel="stylesheet" href="/assets/selective-overlay.css">
+    
+      <link rel="stylesheet" href="/assets/icon-spacing.css">
+    
+  
+  
+  <!-- Core Inline styles -->
+  <style>
+    /* Font loading optimization */
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: local('Montserrat');
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: local('Montserrat');
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    }
+    
+    .clip-text, h1, h2, h3, h4, h5, h6 {
+      font-size-adjust: 0.5;
+    }
+    
+    #services, #about, #clients, #contact, footer {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 5000px;
+    }
+  </style>
+  
+  <!-- Font loading detection script -->
+  <script>
+    document.fonts.ready.then(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    });
+    setTimeout(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    }, 1000);
+  </script>
+</head>
+<body class="hero-layout">
+
+  <!-- Shared topbar + overlay partial -->
+<div class="topbar topbar--transparent">
+    <div class="topbar-left">
+        <a href="/" class="logo-mark" aria-label="Cloud Commercial Holdings" title="Home">
+            <img src="/assets/CCHLogoTwoTransparent.png" alt="Cloud Commercial Holdings logo" class="logo-mark-img" />
+        </a>
+    </div>
+    <div class="topbar-right">
+        <a class="cta-pill" href="/contact">Let's Talk</a>
+        
+        <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-controls="menuOverlay"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        
+    </div>
+</div>
+
+<!-- Fullscreen overlay menu (shared) -->
+<div id="menuOverlay" class="overlay-menu" aria-hidden="true">
+    <button class="overlay-close" id="menuClose" aria-label="Close menu">&times;</button>
+    <ul class="overlay-list">
+        <li><a href="/about">Who We Are</a></li>
+        <li><a href="/services">What We Do</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+    </ul>
+</div>
+
+  <!-- Services grid removed (kept hidden in markup structure as on original app) -->
+<section class="section services-section" style="display: none; visibility: hidden;">
+    <div class="container">
+        <div style="text-align:center; margin-bottom:2rem;">
+            <h2>Our Services</h2>
+        </div>
+        <div class="services-grid">
+            <a href="/services/consulting" class="service-card">
+                <div class="service-icon">
+                    <img src="/assets/service-icons/ConsultingIcon.png" alt="Consulting icon">
+                </div>
+                <h3>Consulting</h3>
+                <p>
+                    Strategic DevSecOps, IT planning, and cybersecurity solutions delivered by certified AWS/Azure
+                    experts. Our team specializes in CI/CD pipelines, cloud architecture, and implementing zero-trust
+                    security frameworks for regulated environments.
+                </p>
+                <span class="service-link">Learn more &rarr;</span>
+            </a>
+            <a href="/services/development" class="service-card">
+                <div class="service-icon">
+                    <img src="/assets/service-icons/sdicon.png" alt="Web Development icon">
+                </div>
+                <h3>Development</h3>
+                <p>
+                    Custom websites and applications built with modern technologies and responsive design principles. We
+                    deliver tailored digital solutions that enhance your online presence, improve user engagement, and
+                    accelerate business growth.
+                </p>
+                <span class="service-link">Learn more &rarr;</span>
+            </a>
+            <a href="/services/health" class="service-card">
+                <div class="service-icon">
+                    <img src="/assets/service-icons/healthicon.svg" alt="Healthcare icon">
+                </div>
+                <h3>Health and Human Services</h3>
+                <p>
+                    Comprehensive healthcare IT services with 15+ years of expertise in compliance, security, and
+                    interoperability. From medical reviews to electronic health records analysis, we help healthcare
+                    organizations stay ahead in the ever-changing technological landscape.
+                </p>
+                <span class="service-link">Learn more &rarr;</span>
+            </a>
+            <a href="/services/ai" class="service-card">
+                <div class="service-icon">
+                    <img src="/assets/service-icons/AIBrainIcon.png" alt="AI Brain icon">
+                </div>
+                <h3>AI Assistance</h3>
+                <p>
+                    Advanced machine learning services and digital automation solutions that solve key business
+                    challenges. Our AI expertise spans predictive analysis, anomaly detection, BI analytics, and
+                    low-code application integration.
+                </p>
+                <span class="service-link">Learn more &rarr;</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Full-page Services Carousel -->
+<div class="fullpage-carousel">
+    <!-- Consulting Slide -->
+    <div class="carousel-slide slide-consulting">
+        <div class="slide-background slide-background-gif">
+            <img src="/assets/service-images/consulting.gif" alt="Consulting services animation"
+                class="slide-background-image">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+            <div class="slide-icon">
+                <img src="/assets/service-icons/ConsultingIcon.png" alt="Consulting icon">
+            </div>
+            <h2 class="slide-title">Consulting</h2>
+            <p class="slide-description">
+                Strategic DevSecOps, IT planning, and cybersecurity solutions delivered by certified AWS/Azure experts.
+                Our team specializes in CI/CD pipelines, cloud architecture, and implementing zero-trust security
+                frameworks for regulated environments.
+            </p>
+            <a href="/services/consulting" class="slide-cta">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Development Slide -->
+    <div class="carousel-slide slide-development">
+        <div class="slide-background slide-background-gif">
+            <img src="/assets/service-images/developer.gif" alt="Development services animation"
+                class="slide-background-image">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content slide-content-development">
+            <div class="slide-icon">
+                <img src="/assets/service-icons/sdicon.png" alt="Development icon">
+            </div>
+            <h2 class="slide-title">Development</h2>
+            <p class="slide-description">
+                Custom websites and applications built with modern technologies and responsive design principles.
+                We deliver tailored digital solutions that enhance your online presence, improve user engagement, and
+                accelerate business growth.
+            </p>
+            <a href="/services/development" class="slide-cta">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Health Services Slide -->
+    <div class="carousel-slide slide-health">
+        <div class="slide-background slide-background-gif">
+            <img src="/assets/health-visuals/healthservicescreen.gif" alt="Health services animation"
+                class="slide-background-image">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+            <div class="slide-icon">
+                <img src="/assets/service-icons/healthicon.svg" alt="Healthcare icon">
+            </div>
+            <h2 class="slide-title">Health and Human Services</h2>
+            <p class="slide-description">
+                Comprehensive healthcare IT services with 15+ years of expertise in compliance, security, and
+                interoperability.
+                From medical reviews to electronic health records analysis, we help healthcare organizations stay ahead
+                in the ever-changing technological landscape.
+            </p>
+            <a href="/services/health" class="slide-cta">Learn More</a>
+        </div>
+    </div>
+
+    <!-- AI Slide -->
+    <div class="carousel-slide slide-ai">
+        <div class="slide-background slide-background-gif">
+            <img src="/assets/service-images/AIAssistance.gif" alt="AI services animation"
+                class="slide-background-image">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content slide-content-ai">
+            <div class="slide-icon">
+                <img src="/assets/service-icons/AIBrainIcon.png" alt="AI Brain icon">
+            </div>
+            <h2 class="slide-title">AI Powered Solutions</h2>
+            <p class="slide-description">
+                Advanced machine learning services and digital automation solutions that solve key business challenges.
+                Our AI expertise spans predictive analysis, anomaly detection, BI analytics, and low-code application
+                integration.
+            </p>
+            <a href="/services/ai" class="slide-cta">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="carousel-arrows">
+        <div class="carousel-prev prev">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor" />
+            </svg>
+        </div>
+        <div class="carousel-next next">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Dots Navigation -->
+    <div class="carousel-dots">
+        <div class="carousel-dot active"></div>
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="carousel-progress" style="width: 25%"></div>
+</div>
+
+<style>
+    .enter-carousel-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 16px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }
+
+    .enter-carousel-btn:hover {
+        background-color: var(--primary-color-dark);
+        transform: translateY(-2px);
+    }
+
+    .enter-fullscreen-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 24px;
+        background-color: #2c5282;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .enter-fullscreen-btn:hover {
+        background-color: #1a365d;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card {
+        position: relative;
+        padding-bottom: 60px;
+    }
+
+    .service-link {
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .enter-carousel-btn {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+</style>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-left">
+            <div class="logo-mark" aria-hidden="true">
+                <img src="/assets/CCHLogoTwoTransparent.png" alt="CCH logo" class="logo-mark-img" />
+            </div>
+        </div>
+
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="/about">Who We Are</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Maryland, 20702</p>
+                <p><a href="mailto:info@cloudcommercial.com">info@cloudcommercial.com</a></p>
+                <p>(703) 201-6540</p>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer-bottom">
+        <div class="container">
+            <div class="footer-certifications">
+                <a href="https://twitter.com" target="_blank"><img src="/assets/twitter.svg" alt="Twitter"
+                        class="footer-icon" /></a>
+                <a href="https://youtube.com" target="_blank"><img src="/assets/youtube.svg" alt="YouTube"
+                        class="footer-icon" /></a>
+                <a href="https://linkedin.com" target="_blank"><img src="/assets/linkedin.svg" alt="LinkedIn"
+                        class="footer-icon" /></a>
+                <a href="https://instagram.com" target="_blank"><img src="/assets/instagram.svg" alt="Instagram"
+                        class="footer-icon" /></a>
+            </div>
+            <div class="copyright">&copy; Cloud Commercial Holdings LLC. All Rights Reserved 2026.</div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Scripts -->
+  
+    
+      <script src="/assets/main.js"></script>
+    
+      <script src="/assets/clean-carousel.js"></script>
+    
+      <script src="/assets/services-carousel-topbar.js"></script>
+    
+      <script src="/assets/topbar-fix.js"></script>
+    
+      <script src="/assets/carousel-slide-links.js"></script>
+    
+  
+  
+  <!-- Font loading optimization script -->
+  <script>
+    if ('fonts' in document) {
+      Promise.all([
+        document.fonts.load('800 1em Montserrat'),
+        document.fonts.load('900 1em Montserrat')
+      ]).then(() => {
+        document.documentElement.classList.add('fonts-loaded');
+      }).catch(err => {
+        console.log('Font loading error:', err);
+        document.documentElement.classList.add('fonts-loaded');
+      });
+      
+      document.fonts.ready.then(() => {
+        document.documentElement.classList.add('all-fonts-ready');
+      });
+    } else {
+      setTimeout(() => {
+        document.documentElement.classList.add('fonts-loaded');
+        document.documentElement.classList.add('all-fonts-ready');
+      }, 500);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+---
+layout: default
+title: Our Services - Cloud Commercial Holdings LLC
+body_class: hero-layout
+additional_css:
+- "/assets/style.css"
+- "/assets/services-cards.css"
+- "/assets/fullpage-carousel.css"
+- "/assets/services-carousel-fixes.css"
+- "/assets/hero-carousel.css"
+- "/assets/topbar-fix.css"
+- "/assets/services-gif-fixes.css"
+- "/assets/carousel-slide-links.css"
+- "/assets/carousel-touchpad.css"
+- "/assets/carousel-speed-fix.css"
+- "/assets/service-icons-fix.css"
+- "/assets/large-icons.css"
+- "/assets/carousel-transitions.css"
+- "/assets/selective-overlay.css"
+- "/assets/icon-spacing.css"
+additional_js:
+- "/assets/main.js"
+- "/assets/clean-carousel.js"
+- "/assets/services-carousel-topbar.js"
+- "/assets/topbar-fix.js"
+- "/assets/carousel-slide-links.js"
+---
+
+<!-- Services grid removed (kept hidden in markup structure as on original app) -->
+<section class="section services-section" style="display: none; visibility: hidden;">
+    <div class="container">
+        <div style="text-align:center; margin-bottom:2rem;">
+            <h2>Our Services</h2>
+        </div>
+        <div class="services-grid">
+            <a href="/services/consulting" class="service-card">
+                <div class="service-icon">
+                    <img src="/assets/service-icons/ConsultingIcon.png" alt="Consulting icon">
+                </div>
+                <h3>Consulting</h3>
+                <p>
+                    Strategic DevSecOps, IT planning, and cybersecurity solutions delivered by certified AWS/Azure
+                    experts. Our team specializes in CI/CD pipelines, cloud architecture, and implementing zero-trust
+                    security frameworks for regulated environments.
+                </p>
+                <span class="service-link">Learn more &rarr;</span>
+            </a>
+            <a href="/services/development" class="service-card">
+                <div class="service-icon">
+                    <img src="/assets/service-icons/sdicon.png" alt="Web Development icon">
+                </div>
+                <h3>Development</h3>
+                <p>
+                    Custom websites and applications built with modern technologies and responsive design principles. We
+                    deliver tailored digital solutions that enhance your online presence, improve user engagement, and
+                    accelerate business growth.
+                </p>
+                <span class="service-link">Learn more &rarr;</span>
+            </a>
+            <a href="/services/health" class="service-card">
+                <div class="service-icon">
+                    <img src="/assets/service-icons/healthicon.svg" alt="Healthcare icon">
+                </div>
+                <h3>Health and Human Services</h3>
+                <p>
+                    Comprehensive healthcare IT services with 15+ years of expertise in compliance, security, and
+                    interoperability. From medical reviews to electronic health records analysis, we help healthcare
+                    organizations stay ahead in the ever-changing technological landscape.
+                </p>
+                <span class="service-link">Learn more &rarr;</span>
+            </a>
+            <a href="/services/ai" class="service-card">
+                <div class="service-icon">
+                    <img src="/assets/service-icons/AIBrainIcon.png" alt="AI Brain icon">
+                </div>
+                <h3>AI Assistance</h3>
+                <p>
+                    Advanced machine learning services and digital automation solutions that solve key business
+                    challenges. Our AI expertise spans predictive analysis, anomaly detection, BI analytics, and
+                    low-code application integration.
+                </p>
+                <span class="service-link">Learn more &rarr;</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Full-page Services Carousel -->
+<div class="fullpage-carousel">
+    <!-- Consulting Slide -->
+    <div class="carousel-slide slide-consulting">
+        <div class="slide-background slide-background-gif">
+            <img src="/assets/service-images/consulting.gif" alt="Consulting services animation"
+                class="slide-background-image">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+            <div class="slide-icon">
+                <img src="/assets/service-icons/ConsultingIcon.png" alt="Consulting icon">
+            </div>
+            <h2 class="slide-title">Consulting</h2>
+            <p class="slide-description">
+                Strategic DevSecOps, IT planning, and cybersecurity solutions delivered by certified AWS/Azure experts.
+                Our team specializes in CI/CD pipelines, cloud architecture, and implementing zero-trust security
+                frameworks for regulated environments.
+            </p>
+            <a href="/services/consulting" class="slide-cta">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Development Slide -->
+    <div class="carousel-slide slide-development">
+        <div class="slide-background slide-background-gif">
+            <img src="/assets/service-images/developer.gif" alt="Development services animation"
+                class="slide-background-image">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content slide-content-development">
+            <div class="slide-icon">
+                <img src="/assets/service-icons/sdicon.png" alt="Development icon">
+            </div>
+            <h2 class="slide-title">Development</h2>
+            <p class="slide-description">
+                Custom websites and applications built with modern technologies and responsive design principles.
+                We deliver tailored digital solutions that enhance your online presence, improve user engagement, and
+                accelerate business growth.
+            </p>
+            <a href="/services/development" class="slide-cta">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Health Services Slide -->
+    <div class="carousel-slide slide-health">
+        <div class="slide-background slide-background-gif">
+            <img src="/assets/health-visuals/healthservicescreen.gif" alt="Health services animation"
+                class="slide-background-image">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+            <div class="slide-icon">
+                <img src="/assets/service-icons/healthicon.svg" alt="Healthcare icon">
+            </div>
+            <h2 class="slide-title">Health and Human Services</h2>
+            <p class="slide-description">
+                Comprehensive healthcare IT services with 15+ years of expertise in compliance, security, and
+                interoperability.
+                From medical reviews to electronic health records analysis, we help healthcare organizations stay ahead
+                in the ever-changing technological landscape.
+            </p>
+            <a href="/services/health" class="slide-cta">Learn More</a>
+        </div>
+    </div>
+
+    <!-- AI Slide -->
+    <div class="carousel-slide slide-ai">
+        <div class="slide-background slide-background-gif">
+            <img src="/assets/service-images/AIAssistance.gif" alt="AI services animation"
+                class="slide-background-image">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content slide-content-ai">
+            <div class="slide-icon">
+                <img src="/assets/service-icons/AIBrainIcon.png" alt="AI Brain icon">
+            </div>
+            <h2 class="slide-title">AI Powered Solutions</h2>
+            <p class="slide-description">
+                Advanced machine learning services and digital automation solutions that solve key business challenges.
+                Our AI expertise spans predictive analysis, anomaly detection, BI analytics, and low-code application
+                integration.
+            </p>
+            <a href="/services/ai" class="slide-cta">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="carousel-arrows">
+        <div class="carousel-prev prev">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor" />
+            </svg>
+        </div>
+        <div class="carousel-next next">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Dots Navigation -->
+    <div class="carousel-dots">
+        <div class="carousel-dot active"></div>
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="carousel-progress" style="width: 25%"></div>
+</div>
+
+<style>
+    .enter-carousel-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 16px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }
+
+    .enter-carousel-btn:hover {
+        background-color: var(--primary-color-dark);
+        transform: translateY(-2px);
+    }
+
+    .enter-fullscreen-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 24px;
+        background-color: #2c5282;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .enter-fullscreen-btn:hover {
+        background-color: #1a365d;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card {
+        position: relative;
+        padding-bottom: 60px;
+    }
+
+    .service-link {
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .enter-carousel-btn {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+</style>

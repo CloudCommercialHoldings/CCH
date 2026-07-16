@@ -1,0 +1,76 @@
+/* 
+ * Large Icons Without Circles
+ * This file replaces circular containers with larger standalone icons
+ */
+
+/* Base styles for all slide icons */
+.slide-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2.5rem;
+  /* Remove border, background, and circle styling */
+  background: none;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+  height: auto;
+  width: auto;
+}
+
+/* Common styles for all icon images - make them enormous */
+.slide-icon img {
+  display: block;
+  max-width: 100%; /* Allow icons to be their natural size */
+  height: auto;
+  /* Add glow effect with reduced outer glow to prevent text overlap */
+  filter: brightness(0) invert(1) drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.3));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect for icons */
+.slide-icon:hover img {
+  transform: scale(1.05);
+}
+
+/* Consulting icon specific adjustments */
+.slide-consulting .slide-icon img {
+  width: 306px; /* 75% bigger than previous 175px */
+  height: auto;
+}
+
+/* Development icon specific adjustments - make it larger and properly centered */
+.slide-development .slide-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.slide-development .slide-icon img {
+  width: 350px; /* Increased from 340px for better presence */
+  height: auto;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Health icon specific adjustments */
+.slide-health .slide-icon img {
+  width: 280px; /* 75% bigger than previous 160px */
+  height: auto;
+}
+
+/* AI icon specific adjustments - extra large as requested */
+.slide-ai .slide-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.slide-ai .slide-icon img {
+  width: 390px; /* Increased from 367px for better presence */
+  height: auto;
+  margin: 0 auto; /* Center the image horizontally */
+}

@@ -1,0 +1,58 @@
+/* AI service footer */
+.service-page--ai .site-footer,
+.service-page--ai .cloud-section {
+  background: linear-gradient(135deg, #3A1D54 0%, #5B21B6 100%);
+}
+
+.service-page--ai .site-footer h4 { 
+  color: #fff; 
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.service-page--ai .site-footer a,
+.service-page--ai .site-footer p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.service-page--ai .site-footer a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.service-page--ai .site-footer-bottom {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-page--ai .footer-icon { 
+  filter: brightness(0) invert(1); 
+}
+
+/* AI Features Styling */
+.ai-features .feature-enhanced {
+  border-color: rgba(91, 33, 182, 0.2); /* Light version of #5B21B6 */
+}
+
+.ai-features .feature-enhanced:hover {
+  border-color: #5B21B6;
+  box-shadow: 0 10px 30px rgba(91, 33, 182, 0.1);
+}
+
+.ai-features .feature-icon-enhanced {
+  background-color: rgba(91, 33, 182, 0.1); /* Very light version of #5B21B6 */
+}
+
+/* Cloud Section Styling for AI */
+.service-page--ai .cloud-section .section-cloud,
+.service-page--ai .cloud-section .filler-cloud {
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+.service-page--ai .cloud-section .cloud-text {
+  color: #3A1D54;
+}
+
+.service-page--ai .cloud-section .cloud-author {
+  color: rgba(58, 29, 84, 0.7);
+}

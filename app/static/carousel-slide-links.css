@@ -1,0 +1,35 @@
+/**
+ * Styles for improved carousel slide interactivity
+ */
+
+/* Add subtle hover effect for clickable slides */
+.carousel-slide.active .slide-cta {
+  position: relative;
+  z-index: 20; /* Ensure it's above the click overlay */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-slide.active:hover .slide-cta {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Add subtle animation for the title on hover */
+.carousel-slide.active:hover .slide-title {
+  animation: gentle-pulse 2s infinite;
+}
+
+@keyframes gentle-pulse {
+  0% { text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); }
+  50% { text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7); }
+  100% { text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); }
+}
+
+/* Remove the plus sign indicator for clickable slides */
+.carousel-slide.active::after {
+  content: none; /* Remove the plus sign */
+}
+
+.carousel-slide.active:hover::after {
+  opacity: 0;
+}

@@ -1,0 +1,32 @@
+<!-- Shared topbar + overlay partial -->
+<div class="topbar topbar--transparent">
+    <div class="topbar-left">
+        <a href="/" class="logo-mark" aria-label="Cloud Commercial Holdings" title="Home">
+            <img src="/assets/CCHLogoTwoTransparent.png" alt="Cloud Commercial Holdings logo" class="logo-mark-img" />
+        </a>
+    </div>
+    <div class="topbar-right">
+        <a class="cta-pill" href="/contact">Let's Talk</a>
+        {% if page.url != "/contact" and page.url != "/contact.html" %}
+        <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-controls="menuOverlay"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        {% else %}
+        <button class="close-button" id="goBack" aria-label="Go back" title="Go back">
+            &times;
+        </button>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Fullscreen overlay menu (shared) -->
+<div id="menuOverlay" class="overlay-menu" aria-hidden="true">
+    <button class="overlay-close" id="menuClose" aria-label="Close menu">&times;</button>
+    <ul class="overlay-list">
+        <li><a href="/about">Who We Are</a></li>
+        <li><a href="/services">What We Do</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+    </ul>
+</div>

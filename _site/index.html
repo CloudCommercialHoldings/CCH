@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cloud Commercial Holdings LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.">
+  
+  <meta property="og:title" content="Cloud Commercial Holdings LLC">
+  <meta property="og:description" content="Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/cch.jpg">
+  <meta property="og:url" content="/">
+  <link rel="icon" type="image/jpeg" href="/assets/cch.jpg">
+  
+  <!-- Font preloading for critical fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" as="style">
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr73w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC73w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- Load all fonts with font-display:swap strategy -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Oswald:wght@600;700&family=Roboto+Slab:wght@400;700&display=swap&font-display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  
+    
+      <link rel="stylesheet" href="/assets/style.css">
+    
+      <link rel="stylesheet" href="/assets/topbar-fix.css">
+    
+      <link rel="stylesheet" href="/assets/team.css">
+    
+      <link rel="stylesheet" href="/assets/service-card-links.css">
+    
+      <link rel="stylesheet" href="/assets/service-icons-fix.css">
+    
+  
+  
+  <!-- Core Inline styles -->
+  <style>
+    /* Font loading optimization */
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: local('Montserrat');
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: local('Montserrat');
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    }
+    
+    .clip-text, h1, h2, h3, h4, h5, h6 {
+      font-size-adjust: 0.5;
+    }
+    
+    #services, #about, #clients, #contact, footer {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 5000px;
+    }
+  </style>
+  
+  <!-- Font loading detection script -->
+  <script>
+    document.fonts.ready.then(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    });
+    setTimeout(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    }, 1000);
+  </script>
+</head>
+<body class="">
+
+  <!-- Shared topbar + overlay partial -->
+<div class="topbar topbar--transparent">
+    <div class="topbar-left">
+        <a href="/" class="logo-mark" aria-label="Cloud Commercial Holdings" title="Home">
+            <img src="/assets/CCHLogoTwoTransparent.png" alt="Cloud Commercial Holdings logo" class="logo-mark-img" />
+        </a>
+    </div>
+    <div class="topbar-right">
+        <a class="cta-pill" href="/contact">Let's Talk</a>
+        
+        <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-controls="menuOverlay"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        
+    </div>
+</div>
+
+<!-- Fullscreen overlay menu (shared) -->
+<div id="menuOverlay" class="overlay-menu" aria-hidden="true">
+    <button class="overlay-close" id="menuClose" aria-label="Close menu">&times;</button>
+    <ul class="overlay-list">
+        <li><a href="/about">Who We Are</a></li>
+        <li><a href="/services">What We Do</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+    </ul>
+</div>
+
+  <!-- Hero with background video and CSS background-clip text -->
+<section class="hero-atriz">
+    <!-- Background floating clouds for hero section -->
+    <div class="background-clouds">
+        <img src="/assets/cloud-shape.svg" alt="" class="bg-cloud bg-cloud-1" />
+        <img src="/assets/cloud-shape.svg" alt="" class="bg-cloud bg-cloud-2" />
+        <img src="/assets/cloud-shape.svg" alt="" class="bg-cloud bg-cloud-3" />
+        <img src="/assets/cloud-shape.svg" alt="" class="bg-cloud bg-cloud-4" />
+    </div>
+
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-clip">
+        <div class="hero-clip-svg">
+            <svg class="svg-clip" viewBox="0 0 7000 3000" preserveAspectRatio="xMinYMid meet" role="img"
+                aria-label="CLOUD COMMERCIAL HOLDINGS masked video text">
+                <defs>
+                    <clipPath id="company-text-clip" clipPathUnits="userSpaceOnUse">
+                        <text x="40" y="940" font-family="Montserrat, Helvetica Neue, Arial, sans-serif"
+                            font-weight="900" font-size="980" letter-spacing="12">CLOUD</text>
+                        <text x="40" y="1980" font-family="Montserrat, Helvetica Neue, Arial, sans-serif"
+                            font-weight="900" font-size="960" letter-spacing="-20">COMMERCIAL</text>
+                        <text x="40" y="2920" font-family="Montserrat, Helvetica Neue, Arial, sans-serif"
+                            font-weight="900" font-size="980" letter-spacing="12">HOLDINGS</text>
+                    </clipPath>
+                </defs>
+
+                <!-- Background shapes for better text legibility - almost completely transparent -->
+                <path d="M40 120 H5200 V1040 H40 Z" fill="rgba(255,240,240,0.15)" class="text-bg text-bg-1"></path>
+                <path d="M40 1160 H6000 V2080 H40 Z" fill="rgba(255,240,240,0.15)" class="text-bg text-bg-2"></path>
+                <path d="M40 2100 H5200 V3020 H40 Z" fill="rgba(255,240,240,0.15)" class="text-bg text-bg-3"></path>
+
+                <!-- Stroke-only text elements positioned behind the clipped video -->
+                <g class="text-strokes">
+                    <text x="40" y="940" font-family="Montserrat, Helvetica Neue, Arial, sans-serif" font-weight="900"
+                        font-size="980" letter-spacing="12" fill="none" stroke="#000000" stroke-width="8"
+                        stroke-linejoin="round" stroke-linecap="round" shape-rendering="geometricPrecision">CLOUD</text>
+                    <text x="40" y="1980" font-family="Montserrat, Helvetica Neue, Arial, sans-serif" font-weight="900"
+                        font-size="960" letter-spacing="-20" fill="none" stroke="#000000" stroke-width="8"
+                        stroke-linejoin="round" stroke-linecap="round"
+                        shape-rendering="geometricPrecision">COMMERCIAL</text>
+                    <text x="40" y="2920" font-family="Montserrat, Helvetica Neue, Arial, sans-serif" font-weight="900"
+                        font-size="980" letter-spacing="12" fill="none" stroke="#000000" stroke-width="8"
+                        stroke-linejoin="round" stroke-linecap="round"
+                        shape-rendering="geometricPrecision">HOLDINGS</text>
+                </g>
+
+                <foreignObject x="0" y="0" width="100%" height="100%" clip-path="url(#company-text-clip)">
+                    <div xmlns="http://www.w3.org/1999/xhtml" class="svg-clip-stack">
+                        <video class="svg-clip-video" autoplay muted loop playsinline preload="none"
+                            poster="/assets/ghanaflag.jpg" disablePictureInPicture disableRemotePlayback
+                            controlsList="nodownload nofullscreen noremoteplayback">
+                            <source src="/assets/AccraGhanaClipped.mp4" type="video/mp4" />
+                        </video>
+                        <div class="svg-clip-grad" aria-hidden="true"></div>
+                    </div>
+                </foreignObject>
+            </svg>
+            <h1 class="clip-text-fallback">CLOUD<br>COMMERCIAL<br>HOLDINGS</h1>
+        </div>
+    </div>
+    <div class="scroll-cta">
+        <span class="scroll-tagline">An investment in knowledge pays the best interest. - Benjamin Franklin</span>
+        <a href="#services" class="scroll-arrow" aria-label="Scroll to next section">
+            <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                <defs>
+                    <linearGradient id="gArrow" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#0b7a4b" />
+                        <stop offset="100%" stop-color="#006b3c" />
+                    </linearGradient>
+                </defs>
+                <circle cx="24" cy="24" r="20" fill="none" stroke="url(#gArrow)" stroke-width="2.25" opacity="0.95" />
+                <path d="M16 20 L24 28 L32 20" fill="none" stroke="#004f33" stroke-width="2.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>
+    </div>
+</section>
+
+<section id="services" class="section">
+    <div class="container">
+        <div class="services-header">
+            <h3>Our Services</h3>
+        </div>
+        <div class="service-grid">
+            <article class="service-card service-card--consulting">
+                <div class="service-content">
+                    <div class="service-icon" aria-hidden="true">
+                        <img src="/assets/service-icons/ConsultingIcon.png" alt="Consulting icon" width="28"
+                            height="28">
+                    </div>
+                    <h4><a href="/services/consulting">Consulting</a></h4>
+                    <p>Streamline your journey to the cloud with expert consulting that ensures security, efficiency,
+                        and alignment with your mission.</p>
+                </div>
+                <div class="service-media" aria-hidden="true">
+                    <img src="/assets/consultingtrans.gif" alt="Consulting animation" class="service-gif"
+                        loading="lazy" />
+                </div>
+            </article>
+
+            <article class="service-card service-card--development">
+                <div class="service-content">
+                    <div class="service-icon" aria-hidden="true">
+                        <img src="/assets/service-icons/sdicon.png" alt="Development icon" width="28" height="28">
+                    </div>
+                    <h4><a href="/services/development">Development</a></h4>
+                    <p>Driving secure, efficient, and high-performing digital operations with comprehensive end-to-end
+                        systems optimization.</p>
+                </div>
+                <div class="service-media" aria-hidden="true">
+                    <img src="/assets/softwaretrans.gif" alt="Development animation" class="service-gif"
+                        loading="lazy" />
+                </div>
+            </article>
+
+            <article class="service-card service-card--health">
+                <div class="service-content">
+                    <div class="service-icon" aria-hidden="true">
+                        <img src="/assets/service-icons/healthicon.svg" alt="Healthcare icon" width="28" height="28">
+                    </div>
+                    <h4><a href="/services/health">Health and Human Services</a></h4>
+                    <p>Security and intelligence at the core of modern, resilient health and human services
+                        applications.</p>
+                </div>
+                <div class="service-media" aria-hidden="true">
+                    <img src="/assets/healthtrans.gif" alt="Health and Human Services animation" class="service-gif"
+                        loading="lazy" />
+                </div>
+            </article>
+
+            <article class="service-card service-card--ai">
+                <div class="service-content">
+                    <div class="service-icon" aria-hidden="true">
+                        <img src="/assets/service-icons/AIBrainIcon.png" alt="AI Brain icon" width="36" height="36">
+                    </div>
+                    <h4><a href="/services/ai">AI Powered Solutions</a></h4>
+                    <p>Modernize your tax processes with intelligent AI automation to maximize accuracy, efficiency, and
+                        compliance.</p>
+                </div>
+                <div class="service-media" aria-hidden="true">
+                    <img src="/assets/aitrans.gif" alt="AI Assistance animation" class="service-gif" loading="lazy" />
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <div class="container philosophy-grid">
+        <div class="philosophy-text">
+            <h3>Our Philosophy</h3>
+            <p class="reveal" data-delay="0">At Cloud Commercial Holdings (CCH), we are committed to creating a culture
+                of faith, trust, and growth. Our foundation is built on courage, honesty, and transparency. These
+                principles guide both how we work internally and how we partner with clients. We encourage clear
+                communication and foster a safe environment where collaboration thrives, enabling organizations to
+                harness the cloud with confidence and clarity.</p>
+
+            <p class="reveal" data-delay="1">We pair executional excellence with a culture of empowerment. Our expertise
+                spans CompTIA, Microsoft Azure, AWS, and Terraform - grounded in real-world partnerships with Deloitte,
+                Booz Allen Hamilton, AWS, and small businesses alike. This breadth allows us to lead modernization
+                initiatives that improve resilience, performance, and cost efficiency for clients of every size.</p>
+
+            <p class="reveal" data-delay="2">But our commitment goes beyond systems - it’s about people. CCH cultivates
+                a workplace where employees feel connected and aligned with our vision. We celebrate achievements, large
+                and small, to fuel motivation and build trust. Through mentorship, we expand opportunity for underserved
+                groups and prepare the next generation of cloud and AI leaders.</p>
+
+            <p class="reveal" data-delay="3">True to our philosophy, we deliver what we promise, to our clients, our
+                partners, and our people. Our mission is simple: build secure systems, and an empowered workforce to run
+                them.</p>
+        </div>
+        <aside class="philosophy-visual reveal" aria-hidden="true">
+            <img src="/assets/philosophyvisual.gif" alt="Philosophy visual" />
+        </aside>
+    </div>
+</section>
+
+<section id="clients" class="section clients-section">
+    <div class="clients-ticker clients-ticker--forward" aria-hidden="true">
+        <div class="ticker-track">
+            <span>CLIENTS / PARTNERS&nbsp;&nbsp;</span><span>CLIENTS / PARTNERS&nbsp;&nbsp;</span><span>CLIENTS /
+                PARTNERS&nbsp;&nbsp;</span><span>CLIENTS / PARTNERS&nbsp;&nbsp;</span><span>CLIENTS /
+                PARTNERS&nbsp;&nbsp;</span><span>CLIENTS / PARTNERS&nbsp;&nbsp;</span><span>CLIENTS /
+                PARTNERS&nbsp;&nbsp;</span><span>CLIENTS / PARTNERS&nbsp;&nbsp;</span><span>CLIENTS /
+                PARTNERS&nbsp;&nbsp;</span><span>CLIENTS / PARTNERS&nbsp;&nbsp;</span><span>CLIENTS /
+                PARTNERS&nbsp;&nbsp;</span><span>CLIENTS / PARTNERS&nbsp;&nbsp;</span><span>CLIENTS /
+                PARTNERS&nbsp;&nbsp;</span><span>CLIENTS / PARTNERS&nbsp;&nbsp;</span><span>CLIENTS /
+                PARTNERS&nbsp;&nbsp;</span><span>CLIENTS / PARTNERS&nbsp;&nbsp;</span><span>CLIENTS /
+                PARTNERS&nbsp;&nbsp;</span><span>CLIENTS / PARTNERS&nbsp;&nbsp;</span><span>CLIENTS /
+                PARTNERS&nbsp;&nbsp;</span><span>CLIENTS / PARTNERS&nbsp;&nbsp;</span><span>CLIENTS /
+                PARTNERS&nbsp;&nbsp;</span><span>CLIENTS / PARTNERS&nbsp;&nbsp;</span><span>CLIENTS /
+                PARTNERS&nbsp;&nbsp;</span>
+        </div>
+    </div>
+    <div class="clients-ticker clients-ticker--reverse" aria-hidden="true">
+        <div class="ticker-track">
+            <span>PARTNERS / CLIENTS&nbsp;&nbsp;</span><span>PARTNERS / CLIENTS&nbsp;&nbsp;</span><span>PARTNERS /
+                CLIENTS&nbsp;&nbsp;</span><span>PARTNERS / CLIENTS&nbsp;&nbsp;</span><span>PARTNERS /
+                CLIENTS&nbsp;&nbsp;</span><span>PARTNERS / CLIENTS&nbsp;&nbsp;</span><span>PARTNERS /
+                CLIENTS&nbsp;&nbsp;</span><span>PARTNERS / CLIENTS&nbsp;&nbsp;</span><span>PARTNERS /
+                CLIENTS&nbsp;&nbsp;</span><span>PARTNERS / CLIENTS&nbsp;&nbsp;</span><span>PARTNERS /
+                CLIENTS&nbsp;&nbsp;</span><span>PARTNERS / CLIENTS&nbsp;&nbsp;</span><span>PARTNERS /
+                CLIENTS&nbsp;&nbsp;</span><span>PARTNERS / CLIENTS&nbsp;&nbsp;</span><span>PARTNERS /
+                CLIENTS&nbsp;&nbsp;</span><span>PARTNERS / CLIENTS&nbsp;&nbsp;</span><span>PARTNERS /
+                CLIENTS&nbsp;&nbsp;</span><span>PARTNERS / CLIENTS&nbsp;&nbsp;</span><span>PARTNERS /
+                CLIENTS&nbsp;&nbsp;</span><span>PARTNERS / CLIENTS&nbsp;&nbsp;</span><span>PARTNERS /
+                CLIENTS&nbsp;&nbsp;</span><span>PARTNERS / CLIENTS&nbsp;&nbsp;</span><span>PARTNERS /
+                CLIENTS&nbsp;&nbsp;</span><span>PARTNERS / CLIENTS&nbsp;&nbsp;</span>
+        </div>
+    </div>
+    <div class="clients-pill">
+        <div class="scroll-container" aria-hidden="false">
+            <div class="scroll-track">
+                <ul class="clients-logos">
+                    <li class="logo"><img src="/assets/Logo%20Carousel/bestbuy.png" alt="Best Buy"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/fiveguys.png" alt="Five Guys"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/verizon.png" alt="Verizon" class="client-logo" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/dcsa.png" alt="DCSA" class="client-logo seal" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/aws.png" alt="AWS" class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/boozallen.png" alt="Booz Allen Hamilton"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/deloitte.png" alt="Deloitte"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/google.png" alt="Google" class="client-logo" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/departmentofstate.png" alt="Department of State"
+                            class="client-logo seal" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/homelandsecurity.png"
+                            alt="Department of Homeland Security" class="client-logo seal" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/ilsa.png"
+                            alt="Integrated Logistics Support Center" class="client-logo" /></li>
+                    <!-- First duplicate set -->
+                    <li class="logo"><img src="/assets/Logo%20Carousel/bestbuy.png" alt="Best Buy"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/fiveguys.png" alt="Five Guys"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/verizon.png" alt="Verizon" class="client-logo" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/dcsa.png" alt="DCSA" class="client-logo seal" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/aws.png" alt="AWS" class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/boozallen.png" alt="Booz Allen Hamilton"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/deloitte.png" alt="Deloitte"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/google.png" alt="Google" class="client-logo" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/departmentofstate.png" alt="Department of State"
+                            class="client-logo seal" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/homelandsecurity.png"
+                            alt="Department of Homeland Security" class="client-logo seal" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/ilsa.png"
+                            alt="Integrated Logistics Support Center" class="client-logo" /></li>
+                    <!-- Second duplicate set -->
+                    <li class="logo"><img src="/assets/Logo%20Carousel/bestbuy.png" alt="Best Buy"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/fiveguys.png" alt="Five Guys"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/verizon.png" alt="Verizon" class="client-logo" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/dcsa.png" alt="DCSA" class="client-logo seal" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/aws.png" alt="AWS" class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/boozallen.png" alt="Booz Allen Hamilton"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/deloitte.png" alt="Deloitte"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/google.png" alt="Google" class="client-logo" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/departmentofstate.png" alt="Department of State"
+                            class="client-logo seal" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/homelandsecurity.png"
+                            alt="Department of Homeland Security" class="client-logo seal" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/ilsa.png"
+                            alt="Integrated Logistics Support Center" class="client-logo" /></li>
+                </ul>
+                <ul class="clients-logos" aria-hidden="true">
+                    <li class="logo"><img src="/assets/Logo%20Carousel/bestbuy.png" alt="Best Buy"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/fiveguys.png" alt="Five Guys"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/verizon.png" alt="Verizon" class="client-logo" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/dcsa.png" alt="DCSA" class="client-logo seal" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/aws.png" alt="AWS" class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/boozallen.png" alt="Booz Allen Hamilton"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/deloitte.png" alt="Deloitte"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/google.png" alt="Google" class="client-logo" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/departmentofstate.png" alt="Department of State"
+                            class="client-logo seal" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/homelandsecurity.png"
+                            alt="Department of Homeland Security" class="client-logo seal" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/ilsa.png"
+                            alt="Integrated Logistics Support Center" class="client-logo" /></li>
+                    <!-- First duplicate set -->
+                    <li class="logo"><img src="/assets/Logo%20Carousel/bestbuy.png" alt="Best Buy"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/fiveguys.png" alt="Five Guys"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/verizon.png" alt="Verizon" class="client-logo" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/dcsa.png" alt="DCSA" class="client-logo seal" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/aws.png" alt="AWS" class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/boozallen.png" alt="Booz Allen Hamilton"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/deloitte.png" alt="Deloitte"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/google.png" alt="Google" class="client-logo" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/departmentofstate.png" alt="Department of State"
+                            class="client-logo seal" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/homelandsecurity.png"
+                            alt="Department of Homeland Security" class="client-logo seal" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/ilsa.png"
+                            alt="Integrated Logistics Support Center" class="client-logo" /></li>
+                    <!-- Second duplicate set -->
+                    <li class="logo"><img src="/assets/Logo%20Carousel/bestbuy.png" alt="Best Buy"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/fiveguys.png" alt="Five Guys"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/verizon.png" alt="Verizon" class="client-logo" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/dcsa.png" alt="DCSA" class="client-logo seal" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/aws.png" alt="AWS" class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/boozallen.png" alt="Booz Allen Hamilton"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/deloitte.png" alt="Deloitte"
+                            class="client-logo" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/google.png" alt="Google" class="client-logo" />
+                    </li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/departmentofstate.png" alt="Department of State"
+                            class="client-logo seal" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/homelandsecurity.png"
+                            alt="Department of Homeland Security" class="client-logo seal" /></li>
+                    <li class="logo"><img src="/assets/Logo%20Carousel/ilsa.png"
+                            alt="Integrated Logistics Support Center" class="client-logo" /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-left">
+            <div class="logo-mark" aria-hidden="true">
+                <img src="/assets/CCHLogoTwoTransparent.png" alt="CCH logo" class="logo-mark-img" />
+            </div>
+        </div>
+
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="/about">Who We Are</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Maryland, 20702</p>
+                <p><a href="mailto:info@cloudcommercial.com">info@cloudcommercial.com</a></p>
+                <p>(703) 201-6540</p>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer-bottom">
+        <div class="container">
+            <div class="footer-certifications">
+                <a href="https://twitter.com" target="_blank"><img src="/assets/twitter.svg" alt="Twitter"
+                        class="footer-icon" /></a>
+                <a href="https://youtube.com" target="_blank"><img src="/assets/youtube.svg" alt="YouTube"
+                        class="footer-icon" /></a>
+                <a href="https://linkedin.com" target="_blank"><img src="/assets/linkedin.svg" alt="LinkedIn"
+                        class="footer-icon" /></a>
+                <a href="https://instagram.com" target="_blank"><img src="/assets/instagram.svg" alt="Instagram"
+                        class="footer-icon" /></a>
+            </div>
+            <div class="copyright">&copy; Cloud Commercial Holdings LLC. All Rights Reserved 2026.</div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Scripts -->
+  
+    
+      <script src="/assets/main.js"></script>
+    
+      <script src="/assets/pausable-carousel.js"></script>
+    
+      <script src="/assets/video-protection.js"></script>
+    
+      <script src="/assets/text-enhancement.js"></script>
+    
+      <script src="/assets/topbar-fix.js"></script>
+    
+      <script src="/assets/service-card-links.js"></script>
+    
+  
+  
+  <!-- Font loading optimization script -->
+  <script>
+    if ('fonts' in document) {
+      Promise.all([
+        document.fonts.load('800 1em Montserrat'),
+        document.fonts.load('900 1em Montserrat')
+      ]).then(() => {
+        document.documentElement.classList.add('fonts-loaded');
+      }).catch(err => {
+        console.log('Font loading error:', err);
+        document.documentElement.classList.add('fonts-loaded');
+      });
+      
+      document.fonts.ready.then(() => {
+        document.documentElement.classList.add('all-fonts-ready');
+      });
+    } else {
+      setTimeout(() => {
+        document.documentElement.classList.add('fonts-loaded');
+        document.documentElement.classList.add('all-fonts-ready');
+      }, 500);
+    }
+  </script>
+</body>
+</html>

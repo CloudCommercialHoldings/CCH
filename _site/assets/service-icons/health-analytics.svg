@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <!-- Healthcare Analytics Icon -->
+  <g transform="translate(50, 50) scale(0.75)">
+    <!-- Chart Base -->
+    <rect x="50" y="80" width="300" height="200" rx="10" stroke="#000" stroke-width="10" fill="#F5F5F5"/>
+    
+    <!-- Bar Chart -->
+    <rect x="80" y="200" width="30" height="60" fill="#6366F1"/>
+    <rect x="120" y="160" width="30" height="100" fill="#6366F1"/>
+    <rect x="160" y="220" width="30" height="40" fill="#6366F1"/>
+    <rect x="200" y="120" width="30" height="140" fill="#6366F1"/>
+    <rect x="240" y="180" width="30" height="80" fill="#6366F1"/>
+    <rect x="280" y="140" width="30" height="120" fill="#6366F1"/>
+    
+    <!-- Healthcare Symbol -->
+    <circle cx="260" cy="100" r="30" fill="#FF5252"/>
+    <rect x="250" y="90" width="20" height="20" rx="2" fill="white"/>
+    <rect x="255" y="85" width="10" height="30" rx="2" fill="white"/>
+    
+    <!-- Data Points/Analytics -->
+    <circle cx="80" cy="140" r="8" fill="#4CAF50"/>
+    <circle cx="120" cy="120" r="8" fill="#4CAF50"/>
+    <circle cx="160" cy="160" r="8" fill="#4CAF50"/>
+    <circle cx="200" cy="100" r="8" fill="#4CAF50"/>
+    <circle cx="240" cy="140" r="8" fill="#4CAF50"/>
+    <circle cx="280" cy="120" r="8" fill="#4CAF50"/>
+    <path d="M80 140 L120 120 L160 160 L200 100 L240 140 L280 120" stroke="#4CAF50" stroke-width="3" fill="none"/>
+    
+    <!-- Magnifying Glass for Analysis -->
+    <circle cx="100" cy="300" r="20" stroke="#000" stroke-width="8" fill="none"/>
+    <path d="M115 315 L140 340" stroke="#000" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

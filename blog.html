@@ -1,0 +1,45 @@
+---
+layout: default
+title: Blog - Cloud Commercial Holdings LLC
+body_class: blog-page
+additional_css:
+- "/assets/style.css"
+- "/assets/topbar-fix.css"
+- "/assets/team.css"
+- "/assets/blog-tiles.css"
+additional_js:
+- "/assets/main.js"
+- "/assets/topbar-fix.js"
+- "/assets/blog-api.js"
+---
+
+<!-- Blog Section -->
+<section class="blog-section section">
+    <div class="container">
+        <div class="blog-header">
+            <h2 class="blog-title">Our Insights</h2>
+            <p class="blog-subtitle">Latest strategic thoughts on cloud governance, Zero Trust security, and
+                optimization</p>
+        </div>
+
+        <!-- Loading State -->
+        <div id="blog-loading" class="blog-loading">
+            <div class="spinner"></div>
+            <p>Loading insights...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="blog-error" class="blog-error" style="display: none;">
+            <i class="fas fa-exclamation-circle error-icon"></i>
+            <h3>Unable to Load Blog Posts</h3>
+            <p>We are currently experiencing technical difficulties retrieving our blog feed. Please try again later.
+            </p>
+            <button onclick="loadBlogPosts()" class="retry-btn">Retry Feed</button>
+        </div>
+
+        <!-- Blog Post Grid -->
+        <div id="blog-grid" class="blog-grid" style="display: none;">
+            <!-- JavaScript will inject dynamic tiles here -->
+        </div>
+    </div>
+</section>

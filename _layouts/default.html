@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
+  
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/cch.jpg">
+  <meta property="og:url" content="{{ page.url }}">
+  <link rel="icon" type="image/jpeg" href="/assets/cch.jpg">
+  
+  <!-- Font preloading for critical fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" as="style">
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr73w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC73w5aXx-p7K4KLg.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- Load all fonts with font-display:swap strategy -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Oswald:wght@600;700&family=Roboto+Slab:wght@400;700&display=swap&font-display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  {% if page.additional_css %}
+    {% for css in page.additional_css %}
+      <link rel="stylesheet" href="{{ css }}">
+    {% endfor %}
+  {% else %}
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/topbar-fix.css">
+  {% endif %}
+  
+  <!-- Core Inline styles -->
+  <style>
+    /* Font loading optimization */
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: local('Montserrat');
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: local('Montserrat');
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    }
+    
+    .clip-text, h1, h2, h3, h4, h5, h6 {
+      font-size-adjust: 0.5;
+    }
+    
+    #services, #about, #clients, #contact, footer {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 5000px;
+    }
+  </style>
+  
+  <!-- Font loading detection script -->
+  <script>
+    document.fonts.ready.then(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    });
+    setTimeout(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    }, 1000);
+  </script>
+</head>
+<body class="{{ page.body_class }}">
+
+  {% include topbar.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+  <!-- Scripts -->
+  {% if page.additional_js %}
+    {% for js in page.additional_js %}
+      <script src="{{ js }}"></script>
+    {% endfor %}
+  {% else %}
+    <script src="/assets/main.js"></script>
+  {% endif %}
+  
+  <!-- Font loading optimization script -->
+  <script>
+    if ('fonts' in document) {
+      Promise.all([
+        document.fonts.load('800 1em Montserrat'),
+        document.fonts.load('900 1em Montserrat')
+      ]).then(() => {
+        document.documentElement.classList.add('fonts-loaded');
+      }).catch(err => {
+        console.log('Font loading error:', err);
+        document.documentElement.classList.add('fonts-loaded');
+      });
+      
+      document.fonts.ready.then(() => {
+        document.documentElement.classList.add('all-fonts-ready');
+      });
+    } else {
+      setTimeout(() => {
+        document.documentElement.classList.add('fonts-loaded');
+        document.documentElement.classList.add('all-fonts-ready');
+      }, 500);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+# Ignore large media
+# large media should be tracked with Git LFS; specific files are tracked in .gitattributes_site/
+_site/

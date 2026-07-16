@@ -1,0 +1,34 @@
+/* Styling for service icons in service cards */
+.service-icon img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  object-fit: contain;
+}
+
+/* Services carousel icon styling */
+.slide-icon img {
+  width: 64px;
+  height: 64px;
+  display: block;
+  object-fit: contain;
+}
+
+/* Make AI icons larger */
+.service-card--ai .service-icon img {
+  width: 36px;
+  height: 36px;
+}
+
+.slide-ai .slide-icon img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Make sure icons use the right color */
+.service-card--consulting .service-icon img,
+.service-card--development .service-icon img,
+.service-card--health .service-icon img,
+.service-card--ai .service-icon img {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(40%) saturate(4871%) hue-rotate(153deg) brightness(95%) contrast(102%);
+}

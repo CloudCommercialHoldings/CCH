@@ -1,0 +1,25 @@
+<!-- Shared topbar + overlay partial -->
+<div class="topbar topbar--transparent">
+  <div class="topbar-left">
+    <div class="logo-mark" aria-label="Cloud Commercial Holdings">
+      <img src="/static/CCHLogoTwoTransparent.png" alt="Cloud Commercial Holdings logo" class="logo-mark-img" />
+    </div>
+  </div>
+  <div class="topbar-right">
+    <a class="cta-pill" href="/contact">Let's Talk</a>
+    <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-controls="menuOverlay" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+
+<!-- Fullscreen overlay menu (shared) -->
+<div id="menuOverlay" class="overlay-menu" aria-hidden="true">
+  <button class="overlay-close" id="menuClose" aria-label="Close menu">×</button>
+  <ul class="overlay-list">
+    <li><a href="/about">Who We Are</a></li>
+    <li><a href="/services">What We Do</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contact">Contact Us</a></li>
+  </ul>
+</div>

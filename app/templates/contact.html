@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us - Cloud Commercial Holdings LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/contact.css" />
+</head>
+<body class="contact-page">
+
+<!-- Top navigation bar -->
+<div class="topbar topbar--transparent">
+  <div class="topbar-left">
+    <a href="/" class="logo-mark" aria-label="Cloud Commercial Holdings" title="Home">
+      <img src="/static/CCHLogoTwoTransparent.png" alt="Cloud Commercial Holdings logo" class="logo-mark-img" />
+    </a>
+  </div>
+  <div class="topbar-right">
+    <button class="close-button" id="goBack" aria-label="Go back" title="Go back">
+      ×
+    </button>
+  </div>
+</div>
+
+<!-- Contact Form Section -->
+<main class="contact-main">
+  <div class="contact-container">
+    <div class="contact-form-wrapper">
+      <div class="contact-header">
+        <h1>Get in touch!</h1>
+        <p>Ready to transform your cloud strategy and implement scrict security?</p>
+      </div>
+
+      <form class="contact-form" action="/contact" method="POST" id="contactForm">
+        <div class="form-group">
+          <label for="firstName">First name *</label>
+          <input type="text" id="firstName" name="firstName" required placeholder="Jane" />
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last name *</label>
+          <input type="text" id="lastName" name="lastName" required placeholder="Smith" />
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber">Phone number *</label>
+          <div class="phone-input-group">
+            <select id="countryCode" name="countryCode" class="country-select">
+              <option value="+1">🇺🇸</option>
+              <option value="+1">🇨🇦</option>
+              <option value="+44">🇬🇧</option>
+              <option value="+49">🇩🇪</option>
+              <option value="+33">🇫🇷</option>
+            </select>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="(201) 123-4321" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required placeholder="name@example.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company *</label>
+          <input type="text" id="company" name="company" required placeholder="Deloitte" />
+        </div>
+
+        <div class="form-group">
+          <label for="message"> Breif description ...</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your project or how we can help..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+
+      <!-- Success/Error Messages -->
+      <div id="success-message" class="message success-message" style="display: none;">
+        <h3>Thank you for your message!</h3>
+        <p>We've received your inquiry and will get back to you within 24-72 hours.</p>
+      </div>
+
+      <div id="error-message" class="message error-message" style="display: none;">
+        <h3>Oops! Something went wrong.</h3>
+        <p>Please try again or contact us directly at <a href="mailto:info@cloudcommercial.com">info@cloudcommercial.com</a></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/static/main.js"></script>
+<script>
+// Back button functionality
+document.getElementById('goBack').addEventListener('click', function() {
+  // Check if there's a previous page in history
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    // Fallback to home page if no history
+    window.location.href = '/';
+  }
+});
+
+// Form submission handling
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const form = e.target;
+  const formData = new FormData(form);
+  const submitButton = form.querySelector('.submit-button');
+  const successMessage = document.getElementById('success-message');
+  const errorMessage = document.getElementById('error-message');
+  
+  // Hide previous messages
+  successMessage.style.display = 'none';
+  errorMessage.style.display = 'none';
+  
+  // Show loading state
+  submitButton.textContent = 'Sending...';
+  submitButton.disabled = true;
+  
+  try {
+    const response = await fetch('/contact', {
+      method: 'POST',
+      body: formData
+    });
+    
+    if (response.ok) {
+      // Success
+      form.style.display = 'none';
+      successMessage.style.display = 'block';
+    } else {
+      // Error
+      errorMessage.style.display = 'block';
+      submitButton.textContent = 'Submit';
+      submitButton.disabled = false;
+    }
+  } catch (error) {
+    // Network error
+    errorMessage.style.display = 'block';
+    submitButton.textContent = 'Submit';
+    submitButton.disabled = false;
+  }
+});
+</script>
+
+</body>
+</html>

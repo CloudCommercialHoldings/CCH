@@ -1,0 +1,116 @@
+{% extends "service-base-new.html" %}
+
+{% block title %}AI Powered Solutions - Cloud Commercial Holdings LLC{% endblock %}
+
+{% block meta_description %}CCH machine learning services deliver advanced ML and AI solutions including predictive analysis, anomaly detection, BI analytics, and automation.{% endblock %}
+
+{% block service_type %}ai{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="/static/enhanced-visual-services.css">
+<link rel="stylesheet" href="/static/ai-service.css">
+<link rel="stylesheet" href="/static/ai-footer.css">
+<script src="/static/scroll-animations.js" defer></script>
+{% endblock %}
+
+{% block service_content %}
+
+<!-- AI Hero -->
+<div class="hero-enhanced ai-hero ai-wave-background">
+  <div class="hero-content-enhanced">
+    <div class="hero-text-container fade-in-up">
+      <h1>AI Powered Solutions & Machine Learning</h1>
+      <p class="hero-tagline-enhanced animation-delay-1">Future-ready ML applications that power better decisions</p>
+      <p class="hero-description animation-delay-2">CCH machine learning services offer advanced algorithms to aid organizations solve key business challenges, enable data-driven decision making, and create innovative business models.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Overview -->
+<div class="content-block ai-overview">
+  <div class="content-block-inner">
+    <div class="content-block-text">
+      <h2 class="scroll-fade scroll-fade-right">Applied Machine Learning</h2>
+      <p class="scroll-fade scroll-fade-right scroll-delay-1">We create future-ready ML-powered applications using pattern recognition, computational intelligence, nature-inspired algorithms, and mathematical optimization. With the right combination of software, drivers, compute, memory, network, and storage resources, we provide scalable, production-ready solutions.</p>
+      <p class="scroll-fade scroll-fade-right scroll-delay-2">Our team helps organizations move from proof-of-concept to production by designing models, building reliable data pipelines, and integrating ML into existing systems for measurable business value.</p>
+    </div>
+    <div class="content-block-image animated-gif-container horizontal-float-container scroll-fade scroll-fade-left">
+      <img src="/static/ai-visuals/Analysis.gif" alt="AI Analysis" class="ai-animation">
+    </div>
+  </div>
+</div>
+
+<!-- Capabilities Grid -->
+<div class="features-enhanced ai-features">
+  <div class="features-container">
+    <h2 class="features-title"><span class="scroll-fade scroll-fade-up">Machine Learning Capabilities</span></h2>
+    <div class="features-grid">
+      <div class="feature-enhanced ai-feature scroll-fade scroll-fade-up">
+        <div class="feature-icon-enhanced">
+          <img src="/static/service-icons/data-science.svg" alt="Predictive Analysis">
+        </div>
+        <h3>Predictive Analysis</h3>
+        <p>Forecast trends and outcomes using time-series, regression and ensemble methods to inform strategic decisions.</p>
+      </div>
+
+      <div class="feature-enhanced ai-feature scroll-fade scroll-fade-up scroll-delay-1">
+        <div class="feature-icon-enhanced">
+          <img src="/static/service-icons/monitoring.svg" alt="Anomaly Detection">
+        </div>
+        <h3>Anomaly Detection</h3>
+        <p>Detect unusual patterns and fraud with robust anomaly detection models for proactive risk mitigation.</p>
+      </div>
+
+      <div class="feature-enhanced ai-feature scroll-fade scroll-fade-up scroll-delay-2">
+        <div class="feature-icon-enhanced">
+          <img src="/static/service-icons/data.svg" alt="BI Analytics">
+        </div>
+        <h3>Intelligent Data Mapping & Transformation</h3>
+        <p>Compliant cloud migration through AI-driven automation and accurate data transformation.</p>
+      </div>
+
+      <div class="feature-enhanced ai-feature scroll-fade scroll-fade-up">
+        <div class="feature-icon-enhanced">
+          <img src="/static/service-icons/app-development.svg" alt="Power Automate">
+        </div>
+        <h3>Power Automate</h3>
+        <p>Automate workflows and operational tasks by integrating ML models with automation platforms like Power Automate.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block cloud_section %}
+<section class="cloud-section">
+  <div class="cloud-section-container">
+    <!-- Main testimonial clouds -->
+    <div class="section-cloud" aria-hidden="true" style="animation-delay: 0s;">
+      <div class="section-cloud-inner">
+        <p class="cloud-text">"Cloud Commercial Holdings optimized our ML models for production, right-sizing our infrastructure and implementing auto-scaling that saved us 40% on cloud costs while having little effect on performance. I 100% recoomened this organzation. They were very resposive, from planning until deployment."</p>
+        <cite class="cloud-author">— Client</cite>
+      </div>
+    </div>
+    <div class="section-cloud" aria-hidden="true" style="animation-delay: -6s;">
+      <div class="section-cloud-inner">
+        <p class="cloud-text">"Cloud Commercial Holdings delivered a fine-tuned GenAI solution that transformed our customer support, handling 65% of inquiries automatically while maintaining a 92% satisfaction rate."</p>
+        <cite class="cloud-author">— Client</cite>
+      </div>
+    </div>
+    <div class="section-cloud" aria-hidden="true" style="animation-delay: -12s;">
+      <div class="section-cloud-inner">
+        <p class="cloud-text">" Cloud Commercial Holdings built and designed our computer vision pipeline on AWS and Azure, handling petabytes of training data and scaling horizontally during peak processing times (EKS Autoscaler, Azure AKS Autoscaler)."</p>
+        <cite class="cloud-author">— Client</cite>
+      </div>
+    </div>
+    
+    <!-- Decorative filler clouds -->
+    <div class="filler-cloud top" aria-hidden="true" style="animation-delay: -3s;"></div>
+    <div class="filler-cloud bottom" aria-hidden="true" style="animation-delay: -10s;"></div>
+    <div class="filler-cloud top" aria-hidden="true" style="animation-delay: -16s;"></div>
+    <div class="filler-cloud bottom" aria-hidden="true" style="animation-delay: -22s;"></div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,371 @@
+/* Cloud Section Styles */
+.cloud-section {
+  width: 100%;
+  min-height: 280px; /* Increased height for larger clouds */
+  padding: 40px 0 60px 0; /* Balanced padding */
+  position: relative;
+  overflow: hidden;
+  background-color: #006B3C; /* Default green for CCH - matches default footer */
+}
+
+.cloud-section-container {
+  max-width: 1200px;
+  height: 220px; /* Increased height to match larger clouds */
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Floating Cloud Styles */
+.section-cloud {
+  position: absolute;
+  width: 460px; /* Increased from 450px to ensure all text fits */
+  height: 250px; /* Increased from 220px for more vertical space */
+  top: 60%; /* Lower vertically within the section */
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: all; /* Enable interactions */
+  animation: float-across 20s linear infinite; /* Slowed down animation */
+  will-change: transform, opacity; /* Performance optimization */
+  opacity: 0; /* Start transparent for fade effect */
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+  cursor: pointer; /* Show pointer on hover */
+  transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
+  
+  /* Direct approach using SVG with solid fill */
+  background-image: url('/static/cloud-shape.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Pause animation on hover with enhanced visual feedback */
+.section-cloud:hover {
+  animation-play-state: paused;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.25)) brightness(1.15);
+  transform: translateY(-53%) scale(1.08); /* More dramatic scale and lift effect */
+  z-index: 10; /* Bring to front when hovered */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Add subtle border on hover */
+  border-radius: 60% 40% 60% 40%; /* Match cloud shape */
+}
+
+.section-cloud-inner {
+  position: relative;
+  padding: 30px 55px 35px 40px; /* Further reduced padding to ensure text fits */
+  background: transparent; /* Keep inner background transparent */
+  max-width: 410px; /* Adjusted to match new padding */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  z-index: 2; /* ensure content sits above the cloud background */
+}
+
+/* Remove separate transform on hover for inner content */
+.section-cloud:hover .section-cloud-inner {
+  /* No specific hover effect for inner content */
+}
+
+.cloud-text {
+  font-size: 0.9rem; /* Reduced further to prevent cutoff */
+  line-height: 1.4;
+  font-style: italic;
+  font-weight: 500; /* Added semi-bold weight for better readability */
+  margin-bottom: 8px;
+  text-shadow: none; /* Removed text shadow */
+  transition: color 0.3s ease;
+  max-height: 150px; /* Increased max height */
+  /* Removed overflow-y: auto to prevent scrolling */
+  padding-right: 5px; /* Space for potential scrollbar */
+}
+
+.cloud-author {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: block;
+  text-align: right;
+  padding-right: 30px; /* Increased padding slightly */
+  transition: color 0.3s ease;
+  opacity: 0.85; /* Slightly toned down for better visual hierarchy */
+}
+
+/* Remove enhanced text contrast on hover */
+.section-cloud:hover .cloud-text {
+  /* No specific hover effect for cloud text */
+}
+
+/* Add a subtle indicator that it's interactive */
+.section-cloud::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.section-cloud:hover::after {
+  opacity: 1;
+}
+
+@keyframes float-across {
+  0% {
+    transform: translateY(-50%) translateX(0) rotate(0deg);
+    left: -460px; /* Updated to match new cloud width */
+    opacity: 0;
+  }
+  4% {
+    transform: translateY(-48%) translateX(0) rotate(0deg);
+    left: -310px;
+    opacity: 1;
+  }
+  8% {
+    transform: translateY(-49%) translateX(0) rotate(0.5deg);
+    left: -200px;
+    opacity: 1;
+  }
+  16% {
+    transform: translateY(-51%) translateX(0) rotate(-0.5deg);
+    left: calc(10vw);
+    opacity: 1;
+  }
+  24% {
+    transform: translateY(-48.5%) translateX(0) rotate(0.7deg);
+    left: calc(20vw);
+    opacity: 1;
+  }
+  32% {
+    transform: translateY(-51.5%) translateX(0) rotate(-0.5deg);
+    left: calc(30vw);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-49.5%) translateX(0) rotate(0.3deg);
+    left: calc(40vw);
+    opacity: 1;
+  }
+  48% {
+    transform: translateY(-50.5%) translateX(0) rotate(-0.3deg);
+    left: calc(50vw);
+    opacity: 1;
+  }
+  56% {
+    transform: translateY(-49%) translateX(0) rotate(0.5deg);
+    left: calc(60vw);
+    opacity: 1;
+  }
+  64% {
+    transform: translateY(-51%) translateX(0) rotate(-0.5deg);
+    left: calc(70vw);
+    opacity: 1;
+  }
+  72% {
+    transform: translateY(-48.5%) translateX(0) rotate(0.7deg);
+    left: calc(80vw);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-50%) translateX(0) rotate(0deg);
+    left: calc(90vw);
+    opacity: 1;
+  }
+  92% {
+    transform: translateY(-49%) translateX(0) rotate(0deg);
+    left: calc(100vw);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-50%) translateX(0) rotate(0deg);
+    left: calc(110vw);
+    opacity: 0;
+  }
+}
+
+/* Default cloud section styling (if no specific class is applied) */
+.cloud-section {
+  background-color: #006B3C; /* Default green for CCH */
+}
+
+/* AI Service - Purple theme */
+.service-page--ai .cloud-section {
+  background: linear-gradient(135deg, #3A1D54 0%, #5B21B6 100%); /* Exact match with AI footer gradient */
+  position: relative;
+}
+
+/* Health Service - Indigo/Purple theme */
+.service-page--health .cloud-section {
+  background-color: #4F46E5;
+  background-image: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%); /* Exact match with Health footer gradient */
+  position: relative;
+}
+
+/* Development Service - Green theme */
+.service-page--development .cloud-section {
+  background-color: #014F46; /* Dark green for development - exact match with footer */
+  position: relative;
+}
+
+/* Consulting Service - Blue theme */
+.service-page--consulting .cloud-section {
+  background-color: #1A2942; /* Dark blue for consulting - exact match with footer */
+  position: relative;
+}
+
+/* Cloud color variations for different service pages - lighter colors for better contrast against dark backgrounds */
+.service-page--ai .cloud-text {
+  color: #ffffff; /* White text for better contrast on dark purple */
+  text-shadow: none; /* Removed text shadow */
+}
+
+.service-page--ai .cloud-author {
+  color: rgba(255, 255, 255, 0.9); /* Slightly muted white for author */
+}
+
+.service-page--health .cloud-text {
+  color: #ffffff; /* White text for better contrast on dark teal */
+  text-shadow: none; /* Removed text shadow */
+}
+
+.service-page--health .cloud-author {
+  color: rgba(255, 255, 255, 0.9); /* Slightly muted white for author */
+}
+
+.service-page--development .cloud-text {
+  color: #ffffff; /* White text for better contrast on dark green */
+  text-shadow: none; /* Removed text shadow */
+}
+
+.service-page--development .cloud-author {
+  color: rgba(255, 255, 255, 0.9); /* Slightly muted white for author */
+}
+
+.service-page--consulting .cloud-text {
+  color: #ffffff; /* White text for better contrast on dark blue */
+  text-shadow: none; /* Removed text shadow */
+}
+
+.service-page--consulting .cloud-author {
+  color: rgba(255, 255, 255, 0.9); /* Slightly muted white for author */
+}
+
+/* Filler Cloud Styles */
+.filler-cloud {
+  position: absolute;
+  width: 180px; /* Smaller than testimonial clouds */
+  height: 100px;
+  z-index: 1; /* Behind the testimonial clouds */
+  pointer-events: none;
+  opacity: 0;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.08));
+  
+  /* Direct approach using SVG with solid fill */
+  background-image: url('/static/cloud-shape.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Top filler clouds - higher in the section */
+.filler-cloud.top {
+  top: 25%;
+  transform: translateY(-50%) scale(0.8);
+  animation: float-across-small 24s linear infinite;
+}
+
+/* Bottom filler clouds - lower in the section */
+.filler-cloud.bottom {
+  top: 75%;
+  transform: translateY(-50%) scale(0.7);
+  animation: float-across-small 28s linear infinite;
+}
+
+/* Animation for smaller filler clouds */
+@keyframes float-across-small {
+  0% {
+    transform: translateY(-50%) translateX(0) rotate(0deg) scale(0.8);
+    left: -180px;
+    opacity: 0;
+  }
+  5% {
+    transform: translateY(-48%) translateX(0) rotate(0deg) scale(0.8);
+    left: -100px;
+    opacity: 0.7;
+  }
+  10% {
+    transform: translateY(-52%) translateX(0) rotate(1deg) scale(0.8);
+    left: calc(10vw - 180px);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(-48%) translateX(0) rotate(-0.5deg) scale(0.8);
+    left: calc(25vw - 180px);
+    opacity: 0.7;
+  }
+  40% {
+    transform: translateY(-51%) translateX(0) rotate(0.7deg) scale(0.8);
+    left: calc(40vw - 180px);
+    opacity: 0.7;
+  }
+  55% {
+    transform: translateY(-49%) translateX(0) rotate(-0.5deg) scale(0.8);
+    left: calc(55vw - 180px);
+    opacity: 0.7;
+  }
+  70% {
+    transform: translateY(-52%) translateX(0) rotate(0.3deg) scale(0.8);
+    left: calc(70vw - 180px);
+    opacity: 0.7;
+  }
+  85% {
+    transform: translateY(-48%) translateX(0) rotate(-0.3deg) scale(0.8);
+    left: calc(85vw - 180px);
+    opacity: 0.7;
+  }
+  95% {
+    transform: translateY(-50%) translateX(0) rotate(0deg) scale(0.8);
+    left: calc(100vw - 80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-50%) translateX(0) rotate(0deg) scale(0.8);
+    left: 100vw;
+    opacity: 0;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .cloud-section {
+    min-height: 180px;
+  }
+  
+  .section-cloud {
+    width: 320px;
+    height: 180px;
+  }
+  
+  .section-cloud-inner {
+    padding: 25px 45px 25px 35px; /* Reduced left padding for mobile */
+    max-width: 300px;
+  }
+  
+  .cloud-text {
+    font-size: 0.85rem; /* Reduced further for mobile */
+  }
+  
+  .cloud-author {
+    font-size: 0.8rem;
+  }
+  
+  .filler-cloud {
+    width: 120px;
+    height: 70px;
+  }
+}

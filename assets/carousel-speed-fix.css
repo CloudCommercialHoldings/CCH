@@ -1,0 +1,35 @@
+/* Speed improvements for carousel responsiveness */
+
+/* Keep normal slide transitions for visual quality */
+.carousel-slide {
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+/* Keep normal active slide transitions */
+.carousel-slide.active {
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+/* Keep normal slide content transitions */
+.carousel-slide.active .slide-content {
+  transition: transform 1s ease 0.3s, opacity 1s ease 0.3s;
+}
+
+/* Keep normal background transitions */
+.slide-background-image, 
+.carousel-slide .slide-background {
+  transition: transform 1.8s ease, filter 1.8s ease;
+}
+
+/* Keep normal overlay transition */
+.slide-overlay {
+  transition: opacity 0.8s ease;
+}
+
+/* Add special style to disable any possible hover delay */
+.carousel-dot,
+.carousel-arrow,
+.slide-click-overlay {
+  transition: none !important;
+  will-change: auto !important;
+}

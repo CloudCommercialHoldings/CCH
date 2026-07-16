@@ -1,12 +1,12 @@
 <!-- Shared topbar + overlay partial -->
 <div class="topbar topbar--transparent">
     <div class="topbar-left">
-        <a href="{{ \'/\' | relative_url }}" class="logo-mark" aria-label="Cloud Commercial Holdings" title="Home">
-            <img src="{{ \'/assets/CCHLogoTwoTransparent.png\' | relative_url }}" alt="Cloud Commercial Holdings logo" class="logo-mark-img" />
+        <a href="{{ '/' | relative_url }}" class="logo-mark" aria-label="Cloud Commercial Holdings" title="Home">
+            <img src="{{ '/assets/CCHLogoTwoTransparent.png' | relative_url }}" alt="Cloud Commercial Holdings logo" class="logo-mark-img" />
         </a>
     </div>
     <div class="topbar-right">
-        <a class="cta-pill" href="{{ \'/contact\' | relative_url }}">Let's Talk</a>
+        <a class="cta-pill" href="{{ '/contact' | relative_url }}">Let's Talk</a>
         {% if page.url != "/contact" and page.url != "/contact.html" %}
         <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-controls="menuOverlay"
             aria-expanded="false">
@@ -24,9 +24,9 @@
 <div id="menuOverlay" class="overlay-menu" aria-hidden="true">
     <button class="overlay-close" id="menuClose" aria-label="Close menu">&times;</button>
     <ul class="overlay-list">
-        <li><a href="{{ \'/about\' | relative_url }}">Who We Are</a></li>
-        <li><a href="{{ \'/services\' | relative_url }}">What We Do</a></li>
-        <li><a href="{{ \'/blog\' | relative_url }}">Blog</a></li>
-        <li><a href="{{ \'/contact\' | relative_url }}">Contact Us</a></li>
+        <li><a href="{{ '/about' | relative_url }}">Who We Are</a></li>
+        <li><a href="{{ '/services' | relative_url }}">What We Do</a></li>
+        <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+        <li><a href="{{ '/contact' | relative_url }}">Contact Us</a></li>
     </ul>
 </div>

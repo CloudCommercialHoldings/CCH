@@ -22,6 +22,8 @@ exclude:
 
 # Jekyll configurations
 markdown: kramdown
+kramdown:
+  input: GFM
 permalink: /:title/
 defaults:
   - scope:

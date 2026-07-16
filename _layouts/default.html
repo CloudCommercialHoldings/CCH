@@ -9,9 +9,9 @@
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/cch.jpg">
+  <meta property="og:image" content="{{ \'/assets/cch.jpg\' | relative_url }}">
   <meta property="og:url" content="{{ page.url }}">
-  <link rel="icon" type="image/jpeg" href="/assets/cch.jpg">
+  <link rel="icon" type="image/jpeg" href="{{ \'/assets/cch.jpg\' | relative_url }}">
   
   <!-- Font preloading for critical fonts -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" as="style">
@@ -24,11 +24,11 @@
   <!-- CSS Stylesheets -->
   {% if page.additional_css %}
     {% for css in page.additional_css %}
-      <link rel="stylesheet" href="{{ css }}">
+      <link rel="stylesheet" href="{{ css | relative_url }}">
     {% endfor %}
   {% else %}
-    <link rel="stylesheet" href="/assets/style.css">
-    <link rel="stylesheet" href="/assets/topbar-fix.css">
+    <link rel="stylesheet" href="{{ \'/assets/style.css\' | relative_url }}">
+    <link rel="stylesheet" href="{{ \'/assets/topbar-fix.css\' | relative_url }}">
   {% endif %}
   
   <!-- Core Inline styles -->
@@ -84,10 +84,10 @@
   <!-- Scripts -->
   {% if page.additional_js %}
     {% for js in page.additional_js %}
-      <script src="{{ js }}"></script>
+      <script src="{{ js | relative_url }}"></script>
     {% endfor %}
   {% else %}
-    <script src="/assets/main.js"></script>
+    <script src="{{ \'/assets/main.js\' | relative_url }}"></script>
   {% endif %}
   
   <!-- Font loading optimization script -->

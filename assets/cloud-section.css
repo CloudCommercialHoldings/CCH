@@ -34,7 +34,7 @@
   transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
   
   /* Direct approach using SVG with solid fill */
-  background-image: url('/static/cloud-shape.svg');
+  background-image: url('../assets/cloud-shape.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -266,7 +266,7 @@
   filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.08));
   
   /* Direct approach using SVG with solid fill */
-  background-image: url('/static/cloud-shape.svg');
+  background-image: url('../assets/cloud-shape.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

@@ -16,7 +16,7 @@ additional_js:
     <div class="container">
         <div class="hero-content-centered">
             <div class="hero-image-large">
-                <img src="/assets/JeffCEOPic.jpg" alt="Jeff Kessie" />
+                <img src="{{ \'/assets/JeffCEOPic.jpg\' | relative_url }}" alt="Jeff Kessie" />
             </div>
             <h1 class="hero-name-large">Meet Jeff</h1>
             <h2 class="hero-title-large">Founder, Chief Executive Officer, and Chief Information Officer</h2>
@@ -24,7 +24,7 @@ additional_js:
             <div class="connect-section">
                 <p class="connect-label">CONNECT WITH JEFF</p>
                 <a href="https://www.linkedin.com/in/jkessie/" target="_blank" class="linkedin-btn">
-                    <img src="/assets/linkedin.svg" alt="LinkedIn" />
+                    <img src="{{ \'/assets/linkedin.svg\' | relative_url }}" alt="LinkedIn" />
                 </a>
             </div>
         </div>
@@ -35,13 +35,13 @@ additional_js:
 <section class="biography-simple">
     <!-- Background Clouds -->
     <div class="bio-cloud bio-cloud-1">
-        <img src="/assets/cloud-shape.svg" alt="">
+        <img src="{{ \'/assets/cloud-shape.svg\' | relative_url }}" alt="">
     </div>
     <div class="bio-cloud bio-cloud-2">
-        <img src="/assets/cloud-shape.svg" alt="">
+        <img src="{{ \'/assets/cloud-shape.svg\' | relative_url }}" alt="">
     </div>
     <div class="bio-cloud bio-cloud-3">
-        <img src="/assets/cloud-shape.svg" alt="">
+        <img src="{{ \'/assets/cloud-shape.svg\' | relative_url }}" alt="">
     </div>
 
     <div class="container">
@@ -66,7 +66,7 @@ additional_js:
 
 <!-- Back Navigation -->
 <div class="back-navigation">
-    <a href="/about" class="back-arrow" aria-label="Back to Team">
+    <a href="{{ \'/about\' | relative_url }}" class="back-arrow" aria-label="Back to Team">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />

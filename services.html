@@ -33,9 +33,9 @@ additional_js:
             <h2>Our Services</h2>
         </div>
         <div class="services-grid">
-            <a href="/services/consulting" class="service-card">
+            <a href="{{ \'/services/consulting\' | relative_url }}" class="service-card">
                 <div class="service-icon">
-                    <img src="/assets/service-icons/ConsultingIcon.png" alt="Consulting icon">
+                    <img src="{{ \'/assets/service-icons/ConsultingIcon.png\' | relative_url }}" alt="Consulting icon">
                 </div>
                 <h3>Consulting</h3>
                 <p>
@@ -45,9 +45,9 @@ additional_js:
                 </p>
                 <span class="service-link">Learn more &rarr;</span>
             </a>
-            <a href="/services/development" class="service-card">
+            <a href="{{ \'/services/development\' | relative_url }}" class="service-card">
                 <div class="service-icon">
-                    <img src="/assets/service-icons/sdicon.png" alt="Web Development icon">
+                    <img src="{{ \'/assets/service-icons/sdicon.png\' | relative_url }}" alt="Web Development icon">
                 </div>
                 <h3>Development</h3>
                 <p>
@@ -57,9 +57,9 @@ additional_js:
                 </p>
                 <span class="service-link">Learn more &rarr;</span>
             </a>
-            <a href="/services/health" class="service-card">
+            <a href="{{ \'/services/health\' | relative_url }}" class="service-card">
                 <div class="service-icon">
-                    <img src="/assets/service-icons/healthicon.svg" alt="Healthcare icon">
+                    <img src="{{ \'/assets/service-icons/healthicon.svg\' | relative_url }}" alt="Healthcare icon">
                 </div>
                 <h3>Health and Human Services</h3>
                 <p>
@@ -69,9 +69,9 @@ additional_js:
                 </p>
                 <span class="service-link">Learn more &rarr;</span>
             </a>
-            <a href="/services/ai" class="service-card">
+            <a href="{{ \'/services/ai\' | relative_url }}" class="service-card">
                 <div class="service-icon">
-                    <img src="/assets/service-icons/AIBrainIcon.png" alt="AI Brain icon">
+                    <img src="{{ \'/assets/service-icons/AIBrainIcon.png\' | relative_url }}" alt="AI Brain icon">
                 </div>
                 <h3>AI Assistance</h3>
                 <p>
@@ -90,13 +90,13 @@ additional_js:
     <!-- Consulting Slide -->
     <div class="carousel-slide slide-consulting">
         <div class="slide-background slide-background-gif">
-            <img src="/assets/service-images/consulting.gif" alt="Consulting services animation"
+            <img src="{{ \'/assets/service-images/consulting.gif\' | relative_url }}" alt="Consulting services animation"
                 class="slide-background-image">
         </div>
         <div class="slide-overlay"></div>
         <div class="slide-content">
             <div class="slide-icon">
-                <img src="/assets/service-icons/ConsultingIcon.png" alt="Consulting icon">
+                <img src="{{ \'/assets/service-icons/ConsultingIcon.png\' | relative_url }}" alt="Consulting icon">
             </div>
             <h2 class="slide-title">Consulting</h2>
             <p class="slide-description">
@@ -104,20 +104,20 @@ additional_js:
                 Our team specializes in CI/CD pipelines, cloud architecture, and implementing zero-trust security
                 frameworks for regulated environments.
             </p>
-            <a href="/services/consulting" class="slide-cta">Learn More</a>
+            <a href="{{ \'/services/consulting\' | relative_url }}" class="slide-cta">Learn More</a>
         </div>
     </div>
 
     <!-- Development Slide -->
     <div class="carousel-slide slide-development">
         <div class="slide-background slide-background-gif">
-            <img src="/assets/service-images/developer.gif" alt="Development services animation"
+            <img src="{{ \'/assets/service-images/developer.gif\' | relative_url }}" alt="Development services animation"
                 class="slide-background-image">
         </div>
         <div class="slide-overlay"></div>
         <div class="slide-content slide-content-development">
             <div class="slide-icon">
-                <img src="/assets/service-icons/sdicon.png" alt="Development icon">
+                <img src="{{ \'/assets/service-icons/sdicon.png\' | relative_url }}" alt="Development icon">
             </div>
             <h2 class="slide-title">Development</h2>
             <p class="slide-description">
@@ -125,20 +125,20 @@ additional_js:
                 We deliver tailored digital solutions that enhance your online presence, improve user engagement, and
                 accelerate business growth.
             </p>
-            <a href="/services/development" class="slide-cta">Learn More</a>
+            <a href="{{ \'/services/development\' | relative_url }}" class="slide-cta">Learn More</a>
         </div>
     </div>
 
     <!-- Health Services Slide -->
     <div class="carousel-slide slide-health">
         <div class="slide-background slide-background-gif">
-            <img src="/assets/health-visuals/healthservicescreen.gif" alt="Health services animation"
+            <img src="{{ \'/assets/health-visuals/healthservicescreen.gif\' | relative_url }}" alt="Health services animation"
                 class="slide-background-image">
         </div>
         <div class="slide-overlay"></div>
         <div class="slide-content">
             <div class="slide-icon">
-                <img src="/assets/service-icons/healthicon.svg" alt="Healthcare icon">
+                <img src="{{ \'/assets/service-icons/healthicon.svg\' | relative_url }}" alt="Healthcare icon">
             </div>
             <h2 class="slide-title">Health and Human Services</h2>
             <p class="slide-description">
@@ -147,20 +147,20 @@ additional_js:
                 From medical reviews to electronic health records analysis, we help healthcare organizations stay ahead
                 in the ever-changing technological landscape.
             </p>
-            <a href="/services/health" class="slide-cta">Learn More</a>
+            <a href="{{ \'/services/health\' | relative_url }}" class="slide-cta">Learn More</a>
         </div>
     </div>
 
     <!-- AI Slide -->
     <div class="carousel-slide slide-ai">
         <div class="slide-background slide-background-gif">
-            <img src="/assets/service-images/AIAssistance.gif" alt="AI services animation"
+            <img src="{{ \'/assets/service-images/AIAssistance.gif\' | relative_url }}" alt="AI services animation"
                 class="slide-background-image">
         </div>
         <div class="slide-overlay"></div>
         <div class="slide-content slide-content-ai">
             <div class="slide-icon">
-                <img src="/assets/service-icons/AIBrainIcon.png" alt="AI Brain icon">
+                <img src="{{ \'/assets/service-icons/AIBrainIcon.png\' | relative_url }}" alt="AI Brain icon">
             </div>
             <h2 class="slide-title">AI Powered Solutions</h2>
             <p class="slide-description">
@@ -168,7 +168,7 @@ additional_js:
                 Our AI expertise spans predictive analysis, anomaly detection, BI analytics, and low-code application
                 integration.
             </p>
-            <a href="/services/ai" class="slide-cta">Learn More</a>
+            <a href="{{ \'/services/ai\' | relative_url }}" class="slide-cta">Learn More</a>
         </div>
     </div>
 

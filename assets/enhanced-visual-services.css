@@ -310,7 +310,7 @@
 }
 
 .consulting-gif-background {
-  background: url('/static/consulting-visuals/consultingheader.gif');
+  background: url('../assets/consulting-visuals/consultingheader.gif');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -359,7 +359,7 @@
 }
 
 .development-gif-background {
-  background: url('/static/software-visuals/softwareheader.gif');
+  background: url('../assets/software-visuals/softwareheader.gif');
   background-size: cover;
   background-position: center;
   position: relative;

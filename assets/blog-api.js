@@ -54,7 +54,7 @@ class BlogAPI {
         categories: ["Cloud", "Migration"],
         tags: ["AWS", "Azure", "Cloud Strategy"],
         author: "Cloud Commercial Holdings",
-        image: "/assets/images/cloud-migration.jpg"
+        image: "/Cloud_Commercial_Holdings_Website/assets/images/cloud-migration.jpg"
       },
       {
         title: "Zero Trust Security Architecture",
@@ -64,7 +64,7 @@ class BlogAPI {
         categories: ["Security", "Architecture"],
         tags: ["Zero Trust", "Cybersecurity", "IAM"],
         author: "Jeff Kessie",
-        image: "/assets/images/zero-trust.jpg"
+        image: "/Cloud_Commercial_Holdings_Website/assets/images/zero-trust.jpg"
       },
       {
         title: "Automation Solutions for DevOps",
@@ -74,7 +74,7 @@ class BlogAPI {
         categories: ["DevOps", "Automation"],
         tags: ["CloudFormation", "Pulumi", "CI/CD"],
         author: "Cloud Commercial Holdings",
-        image: "/assets/images/devops-automation.jpg"
+        image: "/Cloud_Commercial_Holdings_Website/assets/images/devops-automation.jpg"
       }
     ];
   }
@@ -205,7 +205,7 @@ class BlogAPI {
     for (let i = 1; i <= 3; i++) {
       const cloud = document.createElement('div');
       cloud.className = `floating-cloud floating-cloud-${i}`;
-      cloud.innerHTML = '<img src="/static/cloud-shape.svg" alt="">';
+      cloud.innerHTML = '<img src="/Cloud_Commercial_Holdings_Website/assets/cloud-shape.svg" alt="">';
       blogSection.appendChild(cloud);
     }
   }

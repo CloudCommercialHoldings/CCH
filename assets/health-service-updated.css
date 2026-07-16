@@ -5,7 +5,7 @@
 }
 
 .health-gif-background {
-  background: url('/static/health-visuals/healthbanner.gif');
+  background: url('../assets/health-visuals/healthbanner.gif');
   background-size: cover;
   background-position: center;
   position: relative;

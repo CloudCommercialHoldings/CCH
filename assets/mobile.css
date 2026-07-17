@@ -1,0 +1,366 @@
+/* =====================================================
+   MOBILE.CSS — iPhone & small-screen fixes
+   Targets: 480px and below (iPhone SE, 12, 13, 14, 15)
+   Imported last so it always wins specificity battles.
+   ===================================================== */
+
+/* ----- Prevent text resize on orientation change ----- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* ----- Safe-area insets (iPhone notch / home indicator) ----- */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* ====================================================
+   TOPBAR — tighter padding so logo + buttons both fit
+   ==================================================== */
+@media (max-width: 480px) {
+  .topbar {
+    padding: 0 14px;
+    height: 64px;
+  }
+
+  .logo-mark-img {
+    height: 48px;
+  }
+
+  .cta-pill {
+    padding: 7px 14px;
+    font-size: 0.82rem;
+    min-width: 0;
+  }
+
+  .hamburger {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hamburger span:nth-child(1) { top: 12px; }
+  .hamburger span:nth-child(2) { top: 19px; }
+  .hamburger span:nth-child(3) { top: 26px; }
+}
+
+/* ====================================================
+   HERO SVG — scale clip text for small screens
+   ==================================================== */
+@media (max-width: 480px) {
+  .hero-atriz {
+    height: 100svh;
+    height: 100dvh; /* dynamic viewport height — key for iPhone with browser chrome */
+    --topbarH: 64px;
+    padding-top: var(--topbarH);
+  }
+
+  .hero-clip {
+    min-height: 0;
+    padding: 0 2vw;
+  }
+
+  /* Scale down SVG text so it fits without overflow */
+  .svg-clip {
+    height: calc(100dvh - var(--topbarH) - 60px);
+  }
+
+  .scroll-cta {
+    bottom: clamp(60px, 8vh, 100px);
+    right: 12px;
+    gap: 10px;
+  }
+
+  .scroll-tagline {
+    font-size: clamp(13px, 3.5vw, 17px);
+    padding: 8px 12px;
+    max-width: 55vw;
+  }
+}
+
+/* ====================================================
+   OVERLAY MENU — full screen on iPhone
+   ==================================================== */
+@media (max-width: 480px) {
+  .overlay-menu {
+    justify-content: center;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .overlay-list {
+    align-items: center;
+    gap: 10px;
+  }
+
+  .overlay-list a {
+    font-size: clamp(28px, 9vw, 48px);
+  }
+
+  .overlay-close {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+/* ====================================================
+   SERVICES GRID — single column on iPhone
+   ==================================================== */
+@media (max-width: 600px) {
+  .service-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service-card {
+    grid-column: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 18px;
+    min-height: 0;
+  }
+
+  .service-media {
+    display: none; /* hide gifs on tiny screens to keep cards tight */
+  }
+
+  .service-card h4 {
+    font-size: clamp(18px, 5vw, 24px);
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ====================================================
+   CLIENTS PILL — mobile sizing
+   ==================================================== */
+@media (max-width: 480px) {
+  .clients-section {
+    margin-top: -30px;
+    padding: 0 0 30px;
+    min-height: 260px;
+    --pill-collapsed-width: 92vw;
+  }
+
+  .clients-pill {
+    padding: 48px 10px;
+    border-radius: 24px;
+    width: 92vw !important;
+  }
+
+  .clients-logos .client-logo {
+    height: 44px;
+  }
+
+  .clients-logos .client-logo.seal {
+    height: 56px;
+  }
+}
+
+/* ====================================================
+   SECTION & CONTAINER — fix padding on small screens
+   ==================================================== */
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 14px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 24px 12px;
+  }
+}
+
+/* ====================================================
+   PHILOSOPHY SECTION — stack vertically
+   ==================================================== */
+@media (max-width: 760px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 16px 14px 40px;
+  }
+
+  .philosophy-text {
+    padding-right: 0;
+  }
+
+  .philosophy-visual {
+    display: none; /* hide on mobile — saves space */
+  }
+}
+
+/* ====================================================
+   TEAM / ABOUT PAGE — stack cards
+   ==================================================== */
+@media (max-width: 600px) {
+  .team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tile-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .about-list {
+    grid-template-columns: 1fr;
+  }
+
+  .capabilities {
+    gap: 8px;
+  }
+
+  .cap {
+    font-size: 0.82rem;
+    padding: 7px 11px;
+  }
+}
+
+/* ====================================================
+   CEO CARD — stack on iPhone
+   ==================================================== */
+@media (max-width: 600px) {
+  .ceo-card,
+  .about-page .ceo-card {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .ceo-photo {
+    width: 100%;
+    max-width: 240px;
+    height: 240px;
+    margin: 0 auto;
+  }
+
+  .ceo-bio h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ====================================================
+   FOOTER — single column
+   ==================================================== */
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-col ul {
+    align-items: center;
+  }
+
+  .footer-left .logo-mark-img {
+    height: 80px;
+  }
+
+  .site-footer {
+    padding-bottom: 28px;
+  }
+
+  .footer-links a {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+}
+
+/* ====================================================
+   BLOG GRID — single column on iPhone
+   ==================================================== */
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+  }
+
+  .blog-tile {
+    padding: 16px;
+  }
+}
+
+/* ====================================================
+   CONTACT FORM — full width inputs
+   ==================================================== */
+@media (max-width: 600px) {
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px; /* Prevents iOS auto-zoom on focus */
+  }
+
+  .contact-page .container {
+    padding: 16px 10px;
+  }
+}
+
+/* ====================================================
+   GENERAL — better tap targets & no double-tap zoom
+   ==================================================== */
+@media (max-width: 600px) {
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Smooth scrolling feels native on iOS */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent annoying body bounce on iOS overscroll */
+  body {
+    overscroll-behavior-y: none;
+  }
+
+  /* Keep images responsive */
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ====================================================
+   VIDEO — disable on very small screens to save data
+   ==================================================== */
+@media (max-width: 480px) {
+  /* Show poster image instead of video on iPhone */
+  .svg-clip-video {
+    display: none;
+  }
+
+  /* Replace with a gradient so the text clip still looks great */
+  .svg-clip-stack {
+    background: linear-gradient(135deg, #0d7a3e 0%, #006b3c 40%, #1a4a2e 100%);
+  }
+
+  .svg-clip-grad {
+    display: none;
+  }
+}

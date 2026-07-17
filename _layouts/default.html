@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
   
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/topbar-fix.css' | relative_url }}">
   {% endif %}
+  <!-- Mobile styles — always load last so they override everything -->
+  <link rel="stylesheet" href="{{ '/assets/mobile.css' | relative_url }}">
   
   <!-- Core Inline styles -->
   <style>

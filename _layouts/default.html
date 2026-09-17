@@ -59,9 +59,14 @@
       font-size-adjust: 0.5;
     }
     
-    #services, #about, #clients, #contact, footer {
+    #services, #about, #clients, #contact {
       content-visibility: auto;
       contain-intrinsic-size: 1px 5000px;
+    }
+    /* The footer is short; a 5000px placeholder made the scrollbar jump */
+    footer {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 420px;
     }
   </style>
   

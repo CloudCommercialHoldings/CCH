@@ -1,235 +1,93 @@
 ---
-layout: service
+layout: learn-more
 title: Health and Human Services - Cloud Commercial Holdings LLC
-meta_description: Healthcare IT services focused on compliance, security, and operational excellence for health and
-human services organizations.
-body_class: service-detail-page
+meta_description: "Healthcare IT services focused on compliance, security, and operational excellence for health and human services organizations."
 permalink: /services/health
+body_class: learn-more-page
+nav_order: 3
+service_key: health
+cta_topic: healthcare IT
+short_name: Health and Human Services
+icon: /assets/service-icons/healthcare.svg
+accent: "#0f8a4f"
+accent_soft: "#e1f5e9"
 additional_css:
 - "/assets/style.css"
-- "/assets/service-pages.css"
-- "/assets/enhanced-service-pages.css"
-- "/assets/enhanced-service-footer.css"
-- "/assets/enhanced-visual-services.css"
-- "/assets/cloud-section.css"
-- "/assets/health-service.css"
-- "/assets/health-footer.css"
+- "/assets/topbar-fix.css"
+- "/assets/learn-more.css"
 additional_js:
 - "/assets/main.js"
 - "/assets/topbar-fix.js"
-- "/assets/scroll-animations.js"
+
+hero:
+  title: Health and Human Services
+  tagline: Secure healthcare IT solutions
+  intro: Specialized healthcare IT that keeps health and human services organizations compliant, secure, and running smoothly.
+  image: /assets/health-visuals/healthbanner.gif
+
+sections:
+- title: Healthcare IT services
+  body:
+  - CCH offers healthcare IT services that help organizations achieve and maintain compliance, including IT assessments, strategic IT consulting, and a full suite of security services. Every service can be customized to your needs and follows industry best practices.
+  - Advanced security protocols, integrated with collaborative cloud platforms, protect PHI while enabling the data exchange modern treatment plans depend on. With 15+ years of experience, CCH understands the healthcare IT challenges you face in a fast-changing landscape.
+  image: /assets/service-images/healthandhs.gif
+  image_alt: Illustration of healthcare IT services
+
+- title: Healthcare IT solutions
+  body:
+  - Our healthcare IT solutions are built for the unique challenges of medical facilities, clinics, and healthcare service providers. We deliver secure, compliant, efficient systems that support patient care while keeping data protected.
+  solutions:
+  - icon: /assets/service-icons/medical.svg
+    title: Medical review
+    text: Expert evaluation of medical documentation and processes for accuracy and compliance.
+  - icon: /assets/service-icons/ehr.svg
+    title: Electronic health records analysis
+    text: Assessment and optimization of EHR systems to improve clinical workflows.
+  - icon: /assets/service-icons/data.svg
+    title: Clinical data validation and improper payments
+    text: Protecting data integrity and identifying improper payments through advanced validation.
+  - icon: /assets/service-icons/interoperability.svg
+    title: FHIR standards analysis and development
+    text: Implementing Fast Healthcare Interoperability Resources standards for seamless data exchange.
+  - icon: /assets/service-icons/risk.svg
+    title: Risk Management Framework
+    text: A structured approach to managing healthcare information security and privacy risks.
+
+- title: Healthcare compliance and security
+  body:
+  - Staying compliant while delivering great patient care is hard in a heavily regulated environment. Our HIPAA-certified professionals bring deep industry knowledge and technical expertise to help you navigate complex regulatory requirements.
+  - We implement security controls and compliance programs designed for healthcare, keeping patient data protected while clinical workflows stay efficient.
+  image: /assets/health-visuals/healthconvo.gif
+  image_alt: Illustration of a secure healthcare conversation
+
+capabilities_title: Key healthcare capabilities
+capabilities:
+- icon: /assets/service-icons/hipaa.svg
+  title: HIPAA compliance
+  text: Solutions for achieving and maintaining compliance with healthcare privacy and security regulations.
+- icon: /assets/service-icons/patient.svg
+  title: Patient data security
+  text: Advanced protection for sensitive patient information across all systems and touchpoints.
+- icon: /assets/service-icons/telehealth.svg
+  title: Telehealth infrastructure
+  text: Secure, reliable platforms for remote care that maintain quality standards.
+- icon: /assets/service-icons/clinical.svg
+  title: Clinical workflows
+  text: Streamlined healthcare processes that improve efficiency while protecting compliance and patient safety.
+- icon: /assets/service-icons/healthcare-cloud.svg
+  title: Healthcare cloud solutions
+  text: Secure cloud infrastructure built for healthcare applications and compliance requirements.
+- icon: /assets/service-icons/health-analytics.svg
+  title: Healthcare analytics
+  text: Data-driven insights that improve patient outcomes, operational efficiency, and financial performance.
+
+testimonials:
+- quote: "Cloud Commercial Holdings secured our healthcare applications with smart card authentication, so only authorized physicians with approved access cards can view patient records and clinical data."
+  author: Department of Health Administration (Baltimore, Building 11)
+- quote: "Cloud Commercial Holdings engineered an automated lab results workflow that lets physicians receive and review patient information faster, using Azure Logic Apps, Azure AI Document Intelligence, and Microsoft Power Automate."
+  author: Veterans Health Administration
+- quote: "Cloud Commercial Holdings secured our cloud deployments by enforcing the HITECH Act, SOC 2, and the NIST Cybersecurity Framework."
+  author: Department of Veterans Affairs
+
+cta_title: Let's protect your patients' data together.
 ---
-
-<!-- Enhanced Hero Section with GIF Background Animation -->
-<div class="hero-enhanced health-hero health-gif-background">
-    <div class="hero-content-enhanced">
-        <div class="hero-text-container fade-in-up">
-            <h1>Health and Human Services</h1>
-            <p class="hero-tagline-enhanced animation-delay-1">Secure Healthcare IT Solutions</p>
-            <p class="hero-description animation-delay-2">Specialized healthcare IT solutions that ensure compliance,
-                security, and operational excellence for health and human services organizations.</p>
-        </div>
-    </div>
-</div>
-
-<!-- Overview Section with Visual Enhancement -->
-<div class="content-block healthcare-it-section">
-    <div class="content-block-inner">
-        <div class="content-block-text health-block">
-            <h2 class="scroll-fade scroll-fade-right">Healthcare IT Services</h2>
-            <p class="scroll-fade scroll-fade-right scroll-delay-1">CCH offers a variety of healthcare IT services that
-                helps organizations achieve and maintain compliance, including comprehensive IT assessments, strategic
-                IT consulting, and a suite of security services. These healthcare IT services are fully customizable to
-                your unique needs and align with industry best practices.</p>
-            <p class="scroll-fade scroll-fade-right scroll-delay-2">Our healthcare IT experts are here to assist your
-                organization in staying ahead of the curve. Advanced security protocols, integrated with collaborative
-                cloud platforms, ensure the protection of PHI while enabling the seamless data exchange necessary for
-                modern treatment plans. CCH with their 15+ years of experience understands the many healthcare IT
-                challenges you must face in the ever-changing technological landscape.</p>
-        </div>
-        <div class="content-block-image animated-gif-container horizontal-float-container scroll-fade scroll-fade-left">
-            <img src="{{ '/assets/service-images/healthandhs.gif' | relative_url }}" alt="Healthcare IT Services" class="health-animation">
-        </div>
-    </div>
-</div>
-
-<!-- Healthcare Solutions with Enhanced Visuals -->
-<div class="content-block content-block-reverse" style="background-color: #f5f9ff;">
-    <div class="content-block-inner">
-        <div class="content-block-text health-block">
-            <h2 class="scroll-fade scroll-fade-left">Healthcare IT Solutions</h2>
-            <p class="scroll-fade scroll-fade-left scroll-delay-1">Our comprehensive healthcare IT solutions are
-                designed to meet the unique challenges faced by medical facilities, clinics, and healthcare service
-                providers. We deliver secure, compliant, and efficient systems that support optimal patient care while
-                maintaining the highest levels of data protection.</p>
-
-            <div class="health-framework scroll-fade scroll-fade-left scroll-delay-2">
-                <div class="health-solution">
-                    <div class="solution-icon">
-                        <img src="{{ '/assets/service-icons/medical.svg' | relative_url }}" alt="Medical Review">
-                    </div>
-                    <div class="solution-content">
-                        <h4>Medical Review</h4>
-                        <p>Expert evaluation of medical documentation and processes to ensure accuracy and compliance.
-                        </p>
-                    </div>
-                </div>
-                <div class="health-solution">
-                    <div class="solution-icon">
-                        <img src="{{ '/assets/service-icons/ehr.svg' | relative_url }}" alt="Electronic Health Records">
-                    </div>
-                    <div class="solution-content">
-                        <h4>Electronic Health Records Analysis</h4>
-                        <p>Comprehensive assessment and optimization of EHR systems to improve clinical workflows.</p>
-                    </div>
-                </div>
-                <div class="health-solution">
-                    <div class="solution-icon">
-                        <img src="{{ '/assets/service-icons/data.svg' | relative_url }}" alt="Data Validation">
-                    </div>
-                    <div class="solution-content">
-                        <h4>Clinical Data Validation & Improper Payments</h4>
-                        <p>Ensuring data integrity and identifying improper payments through advanced validation
-                            techniques.</p>
-                    </div>
-                </div>
-                <div class="health-solution">
-                    <div class="solution-icon">
-                        <img src="{{ '/assets/service-icons/interoperability.svg' | relative_url }}" alt="FHIR Standards">
-                    </div>
-                    <div class="solution-content">
-                        <h4>FHIR Standards Analysis and Development</h4>
-                        <p>Implementation of Fast Healthcare Interoperability Resources standards for seamless data
-                            exchange.</p>
-                    </div>
-                </div>
-                <div class="health-solution">
-                    <div class="solution-icon">
-                        <img src="{{ '/assets/service-icons/risk.svg' | relative_url }}" alt="Risk Management">
-                    </div>
-                    <div class="solution-content">
-                        <h4>Risk Management Framework</h4>
-                        <p>Structured approach to managing healthcare information security and privacy risks.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-block-image scroll-fade scroll-fade-right">
-            <div class="health-visual">
-                <div class="health-circle animated-gif-container floating-circle">
-                    <img src="{{ '/assets/health-visuals/floatinghealth.gif' | relative_url }}" alt="Healthcare Solutions" class="health-gif">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Healthcare Compliance Section -->
-<div class="content-block healthcare-compliance-section">
-    <div class="content-block-inner">
-        <div class="content-block-text health-block">
-            <h2 class="scroll-fade scroll-fade-right">Healthcare Compliance & Security</h2>
-            <p class="scroll-fade scroll-fade-right scroll-delay-1">In an increasingly regulated healthcare environment,
-                maintaining compliance while delivering exceptional patient care presents unique challenges. Our
-                HIPAA-certified professionals bring deep industry knowledge and technical expertise to help healthcare
-                organizations navigate complex regulatory requirements.</p>
-            <p class="scroll-fade scroll-fade-right scroll-delay-2">We implement security controls and compliance
-                programs specifically designed for healthcare environments, ensuring patient data remains protected
-                while enabling efficient clinical workflows and operations.</p>
-        </div>
-        <div class="content-block-image animated-gif-container scroll-fade scroll-fade-left">
-            <img src="{{ '/assets/health-visuals/healthconvo.gif' | relative_url }}" alt="Healthcare Compliance" class="health-animation">
-        </div>
-    </div>
-</div>
-
-<!-- Enhanced Features Grid -->
-<div class="features-enhanced health-features">
-    <div class="features-container">
-        <h2 class="features-title"><span class="scroll-fade scroll-fade-up">Key Healthcare Capabilities</span></h2>
-        <div class="features-grid">
-            <div class="feature-enhanced health-feature scroll-fade scroll-fade-up">
-                <div class="feature-icon-enhanced">
-                    <img src="{{ '/assets/service-icons/hipaa.svg' | relative_url }}" alt="HIPAA Compliance">
-                </div>
-                <h3>HIPAA Compliance</h3>
-                <p>Comprehensive solutions for achieving and maintaining compliance with healthcare privacy and security
-                    regulations.</p>
-            </div>
-            <div class="feature-enhanced health-feature scroll-fade scroll-fade-up scroll-delay-1">
-                <div class="feature-icon-enhanced">
-                    <img src="{{ '/assets/service-icons/patient.svg' | relative_url }}" alt="Patient Data Security">
-                </div>
-                <h3>Patient Data Security</h3>
-                <p>Advanced protection measures for sensitive patient information across all systems and touchpoints.
-                </p>
-            </div>
-            <div class="feature-enhanced health-feature scroll-fade scroll-fade-up scroll-delay-2">
-                <div class="feature-icon-enhanced">
-                    <img src="{{ '/assets/service-icons/telehealth.svg' | relative_url }}" alt="Telehealth Infrastructure">
-                </div>
-                <h3>Telehealth Infrastructure</h3>
-                <p>Secure, reliable platforms for remote healthcare delivery that maintain quality care standards.</p>
-            </div>
-            <div class="feature-enhanced health-feature scroll-fade scroll-fade-up">
-                <div class="feature-icon-enhanced">
-                    <img src="{{ '/assets/service-icons/clinical.svg' | relative_url }}" alt="Clinical Workflows">
-                </div>
-                <h3>Clinical Workflows</h3>
-                <p>Optimization of healthcare processes to improve efficiency while maintaining compliance and patient
-                    safety.</p>
-            </div>
-            <div class="feature-enhanced health-feature scroll-fade scroll-fade-up scroll-delay-1">
-                <div class="feature-icon-enhanced">
-                    <img src="{{ '/assets/service-icons/healthcare-cloud.svg' | relative_url }}" alt="Healthcare Cloud Solutions">
-                </div>
-                <h3>Healthcare Cloud Solutions</h3>
-                <p>Secure cloud infrastructure designed specifically for healthcare applications and compliance
-                    requirements.</p>
-            </div>
-            <div class="feature-enhanced health-feature scroll-fade scroll-fade-up scroll-delay-2">
-                <div class="feature-icon-enhanced">
-                    <img src="{{ '/assets/service-icons/health-analytics.svg' | relative_url }}" alt="Healthcare Analytics">
-                </div>
-                <h3>Healthcare Analytics</h3>
-                <p>Data-driven insights to improve patient outcomes, operational efficiency, and financial performance.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section class="cloud-section">
-    <div class="cloud-section-container">
-        <!-- Main testimonial clouds -->
-        <div class="section-cloud" aria-hidden="true" style="animation-delay: 0s;">
-            <div class="section-cloud-inner">
-                <p class="cloud-text">"Cloud Commercial Holdings secured our healthcare applications by integrating
-                    smart card authentication, ensuring only authorized physicians with approved access cards could view
-                    patient records and clinical data."</p>
-                <cite class="cloud-author">— Department of Health Administration (Balitmore, Building 11)</cite>
-            </div>
-        </div>
-        <div class="section-cloud" aria-hidden="true" style="animation-delay: -6s;">
-            <div class="section-cloud-inner">
-                <p class="cloud-text">"Cloud Commercial Holdings engineered an automated lab results workflow that
-                    enables physicians to receive and review patient information more efficiently. Using Azure Logic
-                    Apps, Azure AI Document Intelligence, and Microsoft Power Automate."</p>
-                <cite class="cloud-author">— Veterans Health Administration</cite>
-            </div>
-        </div>
-        <div class="section-cloud" aria-hidden="true" style="animation-delay: -12s;">
-            <div class="section-cloud-inner">
-                <p class="cloud-text">"Cloud Commercial Holdings secured our cloud deployments by enforcing HITECH Act,
-                    SOC 2, NIST Cybersecurity Framework."</p>
-                <cite class="cloud-author">— Department of Veterans Affairs</cite>
-            </div>
-        </div>
-
-        <!-- Decorative filler clouds -->
-        <div class="filler-cloud top" aria-hidden="true" style="animation-delay: -5s;"></div>
-        <div class="filler-cloud bottom" aria-hidden="true" style="animation-delay: -12s;"></div>
-        <div class="filler-cloud top" aria-hidden="true" style="animation-delay: -18s;"></div>
-        <div class="filler-cloud bottom" aria-hidden="true" style="animation-delay: -24s;"></div>
-    </div>
-</section>

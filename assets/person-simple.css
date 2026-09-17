@@ -270,3 +270,10 @@
     height: 18px;
   }
 }
+
+/* Côte d'Ivoire flag background (Kunandy's page).
+   Add person-hero-simple--civ to the hero to swap flags. */
+.person-hero-simple--civ::before {
+  background-image: url('../assets/ivorycoastflag.jpg');
+  opacity: 0.2;
+}

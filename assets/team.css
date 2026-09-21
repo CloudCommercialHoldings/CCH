@@ -184,8 +184,11 @@
 
 .tile-image {
   position: relative;
+  /* square box, so every headshot is a circle and never an oval */
   width: 180px;
   height: 180px;
+  aspect-ratio: 1 / 1;
+  flex: 0 0 auto;
   margin: 0 auto 28px;
   border-radius: 50%;
   overflow: hidden;
@@ -194,9 +197,13 @@
 }
 
 .tile-image img {
+  display: block;
   width: 100%;
   height: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
   transition: transform 0.4s ease;
 }
 
@@ -341,6 +348,7 @@
   .tile-image {
     width: 160px;
     height: 160px;
+    aspect-ratio: 1 / 1;
   }
   
   .team-title {

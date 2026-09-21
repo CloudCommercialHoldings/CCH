@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Homepage title fill
+   The company name is filled with a simple cloud scene instead of video:
+   a soft sky gradient with a few gentle cloud forms. Nothing to download.
+   ========================================================================== */
+.svg-clip-cloud {
+  position: absolute;
+  inset: 0;
+  background:
+    /* clouds, softest first */
+    radial-gradient(38% 46% at 22% 74%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 70%),
+    radial-gradient(30% 40% at 47% 84%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%),
+    radial-gradient(26% 34% at 72% 70%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 72%),
+    radial-gradient(22% 30% at 88% 40%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 72%),
+    radial-gradient(20% 26% at 12% 28%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 74%),
+    /* sky */
+    linear-gradient(165deg, #12a06a 0%, #0b7a4b 38%, #006b3c 68%, #00432a 100%);
+}
+
+/* The old video overlay isn't needed now */
+.svg-clip-grad {
+  display: none;
+}

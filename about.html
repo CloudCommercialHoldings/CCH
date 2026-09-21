@@ -22,7 +22,7 @@ additional_js:
 
         <div class="team-grid">
             <!-- Jeff Kessie - CEO/CIO -->
-            <div class="team-tile" data-person="jeff-kessie">
+            <div class="team-tile" data-person="jeff-kessie" data-href="{{ '/jeff-kessie' | relative_url }}">
                 <div class="tile-inner">
                     <div class="tile-image">
                         <img src="{{ '/assets/JeffCEOPic.jpg' | relative_url }}" alt="Jeff Kessie" />
@@ -41,8 +41,28 @@ additional_js:
                 </div>
             </div>
 
+            <!-- Kunandy - Systems Engineer -->
+            <div class="team-tile" data-person="kunandy" data-href="{{ '/kunandy' | relative_url }}">
+                <div class="tile-inner">
+                    <div class="tile-image">
+                        <img src="{{ '/assets/KunandyPic.jpg' | relative_url }}" alt="Kunandy Ouattara" />
+                        <div class="tile-overlay"></div>
+                    </div>
+                    <div class="tile-content">
+                        <h3 class="tile-name">Kunandy Ouattara</h3>
+                        <p class="tile-role">Systems Engineer</p>
+                        <div class="tile-tags">
+                            <span class="tag">Cloud Infrastructure</span>
+                            <span class="tag">AI Pipelines</span>
+                            <span class="tag">Cybersecurity</span>
+                        </div>
+                    </div>
+                    <div class="tile-arrow">→</div>
+                </div>
+            </div>
+
             <!-- Future team member placeholder -->
-            <div class="team-tile coming-soon" data-person="coming-soon">
+            <div class="team-tile coming-soon" data-person="coming-soon" data-href="{{ '/contact' | relative_url }}">
                 <div class="tile-inner">
                     <div class="tile-image">
                         <div class="placeholder-avatar">

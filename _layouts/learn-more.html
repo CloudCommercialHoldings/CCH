@@ -1,0 +1,148 @@
+---
+layout: default
+---
+{%- comment -%}
+  Learn More layout. Each service page (services/*/index.html) is just front matter:
+  hero, sections, capabilities, testimonials, cta. Edit the content there, the design lives
+  in assets/learn-more.css.
+{%- endcomment -%}
+{%- assign service_pages = site.pages | where: "layout", "learn-more" | sort: "nav_order" -%}
+
+<main class="lm" style="--lm-accent: {{ page.accent | default: '#006b3c' }}; --lm-accent-soft: {{ page.accent_soft | default: '#e6f2ec' }};">
+
+  <!-- Hero -->
+  <header class="lm-hero" style="--lm-hero-image: url('{{ page.hero.image | relative_url }}');">
+    <div class="lm-hero-inner">
+      <a class="lm-crumb" href="{{ '/services' | relative_url }}">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All services
+      </a>
+      <h1 class="lm-hero-title">{{ page.hero.title }}</h1>
+      <p class="lm-hero-tagline">{{ page.hero.tagline }}</p>
+      <p class="lm-hero-intro">{{ page.hero.intro }}</p>
+      <div class="lm-hero-actions">
+        <a class="lm-btn lm-btn--light" href="{{ '/contact' | relative_url }}?service={{ page.service_key }}">Talk to us about {{ page.cta_topic }}</a>
+        <a class="lm-btn lm-btn--ghost" href="#capabilities">See capabilities</a>
+      </div>
+    </div>
+    <svg class="lm-hero-edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 90V52c60-30 130-34 190-6 40-38 120-44 170-8 50-30 120-28 160 8 60-46 160-44 210 2 50-34 130-30 170 4 70-40 170-36 220 8 60-30 130-30 170-2 60-26 110-18 150 4V90z"/>
+    </svg>
+  </header>
+
+  <!-- Story sections -->
+  {%- for section in page.sections %}
+  <section class="lm-section{% cycle '', ' lm-section--flip' %}">
+    <div class="lm-section-inner">
+      <div class="lm-copy">
+        <h2>{{ section.title }}</h2>
+        {%- for para in section.body %}
+        <p>{{ para }}</p>
+        {%- endfor %}
+        {%- if section.list %}
+        <ul class="lm-checks">
+          {%- for item in section.list %}
+          <li>{{ item }}</li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+        {%- if section.note %}
+        <p class="lm-note">{{ section.note }}</p>
+        {%- endif %}
+      </div>
+
+      <div class="lm-aside">
+        {%- if section.steps %}
+        <ol class="lm-steps" aria-label="{{ section.steps_label | default: 'Our process' }}">
+          {%- for step in section.steps %}
+          <li>
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.text }}</p>
+          </li>
+          {%- endfor %}
+        </ol>
+        {%- elsif section.solutions %}
+        <ul class="lm-solutions">
+          {%- for s in section.solutions %}
+          <li>
+            <span class="lm-icon"><img src="{{ s.icon | relative_url }}" alt="" loading="lazy"></span>
+            <div>
+              <h3>{{ s.title }}</h3>
+              <p>{{ s.text }}</p>
+            </div>
+          </li>
+          {%- endfor %}
+        </ul>
+        {%- elsif section.image %}
+        <figure class="lm-visual">
+          <img src="{{ section.image | relative_url }}" alt="{{ section.image_alt }}" loading="lazy">
+        </figure>
+        {%- endif %}
+      </div>
+    </div>
+  </section>
+  {%- endfor %}
+
+  <!-- Capabilities -->
+  <section class="lm-caps" id="capabilities">
+    <div class="lm-caps-inner">
+      <h2>{{ page.capabilities_title }}</h2>
+      <ul class="lm-caps-grid lm-caps-grid--{{ page.capabilities.size }}">
+        {%- for cap in page.capabilities %}
+        <li class="lm-cap">
+          <span class="lm-icon"><img src="{{ cap.icon | relative_url }}" alt="" loading="lazy"></span>
+          <h3>{{ cap.title }}</h3>
+          <p>{{ cap.text }}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  {%- if page.testimonials %}
+  <section class="lm-voices" aria-labelledby="voices-title">
+    <svg class="lm-voices-edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 0v38c60 30 130 34 190 6 40 38 120 44 170 8 50 30 120 28 160-8 60 46 160 44 210-2 50 34 130 30 170-4 70 40 170 36 220-8 60 30 130 30 170 2 60 26 110 18 150-4V0z"/>
+    </svg>
+    <div class="lm-voices-inner">
+      <h2 id="voices-title">What clients say</h2>
+      <div class="lm-voices-row">
+        {%- for t in page.testimonials %}
+        <figure class="lm-voice">
+          <blockquote>{{ t.quote }}</blockquote>
+          <figcaption>{{ t.author }}</figcaption>
+        </figure>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {%- endif %}
+
+  <!-- Closing CTA + other services -->
+  <section class="lm-next">
+    <div class="lm-next-inner">
+      <div class="lm-cta">
+        <h2>{{ page.cta_title }}</h2>
+        <p>Tell us what you're working on. We usually reply within 1 to 3 business days.</p>
+        <a class="lm-btn lm-btn--solid" href="{{ '/contact' | relative_url }}?service={{ page.service_key }}">Start the conversation</a>
+      </div>
+
+      <nav class="lm-others" aria-label="Other services">
+        <p class="lm-others-label">Explore our other services</p>
+        <ul>
+          {%- for other in service_pages %}
+          {%- unless other.url == page.url %}
+          <li>
+            <a href="{{ other.url | relative_url }}">
+              <span class="lm-icon lm-icon--sm" style="background: {{ other.accent_soft }};"><img src="{{ other.icon | relative_url }}" alt="" loading="lazy"></span>
+              <span>{{ other.short_name }}</span>
+            </a>
+          </li>
+          {%- endunless %}
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+  </section>
+</main>

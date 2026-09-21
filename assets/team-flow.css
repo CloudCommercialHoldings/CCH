@@ -1,0 +1,297 @@
+/* ==========================================================================
+   Who We Are: team cards
+   Each card is a different organic shape (echoing the round headshots) and the
+   row flows in a wave along a dashed path. Loaded after team.css.
+   ========================================================================== */
+.crew {
+  --crew-green: var(--color-green, #006b3c);
+  --crew-deep: #00351e;
+  --crew-cream: var(--color-cream, #ffeeed);
+  --crew-gold: var(--color-gold, #f1c40f);
+  position: relative;
+  z-index: 2;
+  max-width: 1120px;
+  margin: 40px auto 20px;
+  padding: 90px 0 40px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.85fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* dashed line the cards sit along */
+.crew-path {
+  position: absolute;
+  left: -4%;
+  right: -4%;
+  top: 70px;
+  width: 108%;
+  height: 300px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.crew-path path {
+  fill: none;
+  stroke: var(--crew-green);
+  stroke-width: 2;
+  stroke-dasharray: 2 12;
+  stroke-linecap: round;
+  opacity: 0.45;
+}
+
+/* ---------- Card ---------- */
+.crew-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 116px 32px 38px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), border-radius 0.6s ease, box-shadow 0.35s ease;
+  animation: crewIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.crew-card:focus-visible {
+  outline: 3px solid var(--crew-gold);
+  outline-offset: 6px;
+}
+
+/* Three different shapes + positions so the row flows, not a grid of boxes */
+.crew-card--jeff {
+  margin-top: 0;
+  padding-top: 124px;
+  background: var(--crew-deep);
+  color: #fff;
+  border-radius: 46% 54% 42% 58% / 30% 34% 66% 70%;
+  box-shadow: 0 34px 60px -30px rgba(0, 53, 30, 0.7);
+}
+
+.crew-card--kunandy {
+  margin-top: 110px;
+  background: #fff;
+  color: #1f2a24;
+  border-radius: 58% 42% 55% 45% / 36% 30% 70% 64%;
+  box-shadow: 0 34px 60px -32px rgba(0, 53, 30, 0.45);
+  animation-delay: 0.12s;
+}
+
+.crew-card--join {
+  margin-top: 30px;
+  padding-top: 104px;
+  background: transparent;
+  color: var(--crew-deep);
+  border: 2px dashed rgba(0, 107, 60, 0.5);
+  border-radius: 50% 50% 38% 62% / 42% 38% 62% 58%;
+  animation-delay: 0.24s;
+}
+
+.crew-card:hover {
+  transform: translateY(-8px) rotate(-0.6deg);
+}
+
+.crew-card--jeff:hover {
+  border-radius: 54% 46% 58% 42% / 34% 28% 72% 66%;
+}
+
+.crew-card--kunandy:hover {
+  transform: translateY(-8px) rotate(0.6deg);
+  border-radius: 48% 52% 45% 55% / 30% 36% 64% 70%;
+}
+
+.crew-card--join:hover {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: var(--crew-green);
+}
+
+/* ---------- Headshot ---------- */
+/* Every headshot is the same circle: same size, square box, 50% radius */
+.crew-photo {
+  position: absolute;
+  top: -72px;
+  left: 50%;
+  width: 168px;
+  height: 168px;
+  aspect-ratio: 1;
+  margin-left: -84px;
+  border-radius: 50%;
+  padding: 6px;
+  background: var(--crew-cream);
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.45);
+}
+
+.crew-photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.crew-card:hover .crew-photo img {
+  transform: scale(1.04);
+}
+
+.crew-flag {
+  position: absolute;
+  right: 6px;
+  bottom: 10px;
+  width: 38px;
+  height: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 3px var(--crew-cream), 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.crew-photo--plus {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  background: var(--crew-gold);
+  color: var(--crew-deep);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1;
+  transition: transform 0.35s ease;
+}
+
+.crew-card--join:hover .crew-photo--plus {
+  transform: rotate(90deg);
+}
+
+/* ---------- Text ---------- */
+.crew-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.55rem;
+  line-height: 1.15;
+}
+
+.crew-card--kunandy .crew-name {
+  color: var(--crew-green);
+}
+
+.crew-role {
+  margin-top: 6px;
+  max-width: 24ch;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+.crew-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 18px;
+}
+
+.crew-tags span {
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.crew-card--kunandy .crew-tags span {
+  background: #fff1e2;
+  color: #8a4600;
+}
+
+.crew-card--join .crew-tags span {
+  background: rgba(0, 107, 60, 0.1);
+  color: var(--crew-green);
+}
+
+.crew-go {
+  margin-top: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid currentColor;
+}
+
+.crew-card--jeff .crew-go {
+  color: var(--crew-gold);
+}
+
+.crew-card--kunandy .crew-go {
+  color: var(--crew-green);
+}
+
+@keyframes crewIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .crew {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 120px;
+    max-width: 720px;
+  }
+
+  .crew-card--kunandy {
+    margin-top: 70px;
+  }
+
+  .crew-card--join {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(360px, 100%);
+    margin-top: 0;
+  }
+
+  .crew-path {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .crew {
+    grid-template-columns: 1fr;
+    row-gap: 110px;
+    padding: 90px 16px 40px;
+    max-width: 400px;
+  }
+
+  .crew-card,
+  .crew-card--kunandy,
+  .crew-card--join {
+    margin-top: 0;
+  }
+
+  /* keep the flow on phones: cards nudge left and right */
+  .crew-card--jeff {
+    margin-right: 18px;
+  }
+
+  .crew-card--kunandy {
+    margin-left: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crew-card {
+    animation: none;
+    transition: none;
+  }
+
+  .crew-card:hover {
+    transform: none;
+  }
+}

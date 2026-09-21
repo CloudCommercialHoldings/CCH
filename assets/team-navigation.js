@@ -5,16 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
   
   teamTiles.forEach(tile => {
     tile.addEventListener('click', function() {
-      const personId = this.getAttribute('data-person');
-      
-      if (personId === 'jeff-kessie') {
-        // Navigate to Jeff's detail page using the logo href to capture baseurl correctly
-        const baseUrl = document.querySelector('.logo-mark') ? document.querySelector('.logo-mark').getAttribute('href') : '/';
-        const separator = baseUrl.endsWith('/') ? '' : '/';
-        window.location.href = baseUrl + separator + 'jeff-kessie';
-      } else if (personId === 'coming-soon') {
-        // Show coming soon message or redirect to careers
-        alert('More team members coming soon! We\'re growing our team.');
+      // Each tile carries its own link in data-href (set in about.html),
+      // so adding a new team member never needs a JS change.
+      const href = this.getAttribute('data-href');
+      if (href) {
+        window.location.href = href;
       }
     });
     

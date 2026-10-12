@@ -277,3 +277,83 @@
   background-image: url('../assets/ivorycoastflag.jpg');
   opacity: 0.2;
 }
+
+/* "Check out some of our work" links, under the Connect section.
+   Each link is a .work-link pill: small round icon, label, and an arrow
+   showing it opens in a new tab. Add more by copying a block in the HTML. */
+.work-section {
+  margin-top: 32px;
+}
+
+.work-label {
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.work-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.work-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 20px 0 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #1a1a1a;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.work-link:hover {
+  background: #fff;
+  color: #1a1a1a;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.work-link:focus-visible {
+  outline: 3px solid var(--color-gold, #f1c40f);
+  outline-offset: 3px;
+}
+
+.work-link img {
+  width: 34px;
+  height: 34px;
+  padding: 5px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: var(--color-cream, #ffeeed);
+  flex-shrink: 0;
+}
+
+.work-link::after {
+  content: '↗';
+  font-size: 0.9em;
+  opacity: 0.55;
+}
+
+@media (max-width: 768px) {
+  .work-section {
+    margin-top: 28px;
+    padding: 0 20px;
+  }
+
+  .work-link {
+    width: 100%;
+    justify-content: center;
+  }
+}

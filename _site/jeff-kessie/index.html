@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Meet Jeff - Cloud Commercial Holdings LLC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.">
   
   <meta property="og:title" content="Meet Jeff - Cloud Commercial Holdings LLC">
   <meta property="og:description" content="Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/cch.jpg">
-  <meta property="og:url" content="/jeff-kessie/">
+  <meta property="og:image" content="http://localhost:4000/assets/cch.jpg">
+  <meta property="og:url" content="http://localhost:4000/jeff-kessie/">
   <link rel="icon" type="image/jpeg" href="/assets/cch.jpg">
   
   <!-- Font preloading for critical fonts -->
@@ -31,6 +31,8 @@
       <link rel="stylesheet" href="/assets/person-simple.css">
     
   
+  <!-- Mobile styles — always load last so they override everything -->
+  <link rel="stylesheet" href="/assets/mobile.css">
   
   <!-- Core Inline styles -->
   <style>
@@ -58,9 +60,14 @@
       font-size-adjust: 0.5;
     }
     
-    #services, #about, #clients, #contact, footer {
+    #services, #about, #clients, #contact {
       content-visibility: auto;
       contain-intrinsic-size: 1px 5000px;
+    }
+    /* The footer is short; a 5000px placeholder made the scrollbar jump */
+    footer {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 420px;
     }
   </style>
   
@@ -121,6 +128,26 @@
                     <img src="/assets/linkedin.svg" alt="LinkedIn" />
                 </a>
             </div>
+
+            <!-- Our work — copy a .work-link block to add another link -->
+            <div class="work-section">
+                <p class="work-label">CHECK OUT SOME OF OUR WORK</p>
+                <div class="work-links">
+
+                    <a href="https://cloudcommercial.com" target="_blank" rel="noopener" class="work-link">
+                        <img src="/assets/cloud-shape.svg" alt="" />
+                        <span>Cloud Commercial Holdings</span>
+                    </a>
+
+                    <!-- Jeff's site — replace href when the URL is ready, then delete the two style/aria attributes below -->
+                    <a href="" target="_blank" rel="noopener" class="work-link" aria-disabled="true"
+                        style="opacity:.55;pointer-events:none;">
+                        <img src="/assets/cloud-shape.svg" alt="" />
+                        <span>Jeff's Site</span>
+                    </a>
+
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -168,6 +195,7 @@
         <span>Back to Team</span>
     </a>
 </div>
+
 
   <footer class="site-footer">
     <div class="container footer-grid">

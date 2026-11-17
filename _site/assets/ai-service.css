@@ -5,7 +5,7 @@
 }
 
 .ai-wave-background {
-  background: url('/static/ai-visuals/AIWave.gif');
+  background: url('../assets/ai-visuals/AIWave.gif');
   background-size: cover;
   background-position: center;
   position: relative;

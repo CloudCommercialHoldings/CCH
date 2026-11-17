@@ -1,7 +1,9 @@
 title: Cloud Commercial Holdings LLC
 description: Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.
+# Leave empty so local `bundle exec jekyll serve` is http://127.0.0.1:4000/.
+# GitHub Actions overrides this with --baseurl (/CCH on github.io, "" on a custom domain).
 baseurl: ""
-url: "https://cloudcommercial.com"
+url: "https://cloudcommercialholdings.github.io"
 
 # Exclude these files/directories from the Jekyll build
 exclude:

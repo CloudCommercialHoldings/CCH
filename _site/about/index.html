@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>About Us - Cloud Commercial Holdings LLC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.">
   
   <meta property="og:title" content="About Us - Cloud Commercial Holdings LLC">
   <meta property="og:description" content="Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/cch.jpg">
-  <meta property="og:url" content="/about/">
+  <meta property="og:image" content="http://localhost:4000/assets/cch.jpg">
+  <meta property="og:url" content="http://localhost:4000/about/">
   <link rel="icon" type="image/jpeg" href="/assets/cch.jpg">
   
   <!-- Font preloading for critical fonts -->
@@ -31,6 +31,8 @@
       <link rel="stylesheet" href="/assets/team.css">
     
   
+  <!-- Mobile styles — always load last so they override everything -->
+  <link rel="stylesheet" href="/assets/mobile.css">
   
   <!-- Core Inline styles -->
   <style>
@@ -58,9 +60,14 @@
       font-size-adjust: 0.5;
     }
     
-    #services, #about, #clients, #contact, footer {
+    #services, #about, #clients, #contact {
       content-visibility: auto;
       contain-intrinsic-size: 1px 5000px;
+    }
+    /* The footer is short; a 5000px placeholder made the scrollbar jump */
+    footer {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 420px;
     }
   </style>
   
@@ -115,7 +122,7 @@
 
         <div class="team-grid">
             <!-- Jeff Kessie - CEO/CIO -->
-            <div class="team-tile" data-person="jeff-kessie">
+            <div class="team-tile" data-person="jeff-kessie" data-href="/jeff-kessie">
                 <div class="tile-inner">
                     <div class="tile-image">
                         <img src="/assets/JeffCEOPic.jpg" alt="Jeff Kessie" />
@@ -134,8 +141,28 @@
                 </div>
             </div>
 
+            <!-- Kunandy - Systems Engineer -->
+            <div class="team-tile" data-person="kunandy" data-href="/kunandy">
+                <div class="tile-inner">
+                    <div class="tile-image">
+                        <img src="/assets/KunandyPic.jpg" alt="Kunandy Ouattara" />
+                        <div class="tile-overlay"></div>
+                    </div>
+                    <div class="tile-content">
+                        <h3 class="tile-name">Kunandy Ouattara</h3>
+                        <p class="tile-role">Systems Engineer</p>
+                        <div class="tile-tags">
+                            <span class="tag">Cloud Infrastructure</span>
+                            <span class="tag">AI Pipelines</span>
+                            <span class="tag">Cybersecurity</span>
+                        </div>
+                    </div>
+                    <div class="tile-arrow">→</div>
+                </div>
+            </div>
+
             <!-- Future team member placeholder -->
-            <div class="team-tile coming-soon" data-person="coming-soon">
+            <div class="team-tile coming-soon" data-person="coming-soon" data-href="/contact">
                 <div class="tile-inner">
                     <div class="tile-image">
                         <div class="placeholder-avatar">

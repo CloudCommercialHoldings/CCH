@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Privacy Policy - Cloud Commercial Holdings LLC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.">
   
   <meta property="og:title" content="Privacy Policy - Cloud Commercial Holdings LLC">
   <meta property="og:description" content="Secure, compliant cloud strategy, migration, AI, and managed services for regulated industries.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/cch.jpg">
-  <meta property="og:url" content="/privacy-policy/">
+  <meta property="og:image" content="http://localhost:4000/assets/cch.jpg">
+  <meta property="og:url" content="http://localhost:4000/privacy-policy/">
   <link rel="icon" type="image/jpeg" href="/assets/cch.jpg">
   
   <!-- Font preloading for critical fonts -->
@@ -29,6 +29,8 @@
       <link rel="stylesheet" href="/assets/topbar-fix.css">
     
   
+  <!-- Mobile styles — always load last so they override everything -->
+  <link rel="stylesheet" href="/assets/mobile.css">
   
   <!-- Core Inline styles -->
   <style>
@@ -56,9 +58,14 @@
       font-size-adjust: 0.5;
     }
     
-    #services, #about, #clients, #contact, footer {
+    #services, #about, #clients, #contact {
       content-visibility: auto;
       contain-intrinsic-size: 1px 5000px;
+    }
+    /* The footer is short; a 5000px placeholder made the scrollbar jump */
+    footer {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 420px;
     }
   </style>
   

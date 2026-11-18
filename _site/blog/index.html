@@ -114,142 +114,32 @@
     </ul>
 </div>
 
-  <!-- Blog Section -->
+  <!-- Blog Section: tiles sync live from CCH-BLOGS/feed.xml -->
 <section class="blog-section section">
     <div class="container">
         <div class="blog-header">
             <h2 class="blog-title">Our Insights</h2>
-            <p class="blog-subtitle">Latest strategic thoughts on cloud governance, Zero Trust security, and
-                optimization</p>
+            <p class="blog-subtitle">Latest posts from the CCH blog on cloud, security, and engineering</p>
         </div>
 
-        <!-- Blog Post Grid -->
-        <div class="blog-grid">
-            
-            <a class="blog-tile" href="/zero-trust-security-architecture/">
-              <div class="external-link" title="Read post">↗</div>
-              
-              <div class="blog-tile-image placeholder">
-                
-                  <img src="/assets/images/zero-trust.jpg" alt="Zero Trust Security Architecture" style="width:100%; height:100%; object-fit:cover; border-radius: 4px;">
-                
-              </div>
-              
-              <div class="blog-tile-content">
-                <div class="blog-tile-meta">
-                  <span class="blog-tile-date">
-                    <i class="fas fa-calendar-alt"></i> July 16, 2026
-                  </span>
-                  <span class="blog-tile-author">
-                    <i class="fas fa-user"></i> Jeff Kessie
-                  </span>
-                </div>
-                
-                <h3 class="blog-tile-title">Zero Trust Security Architecture</h3>
-                <p class="blog-tile-excerpt">Implementing Zero Trust principles in modern enterprise environments. Discover how to secure your organization with identity-based security controls and continuous verification.</p>
-                
-                
-                <div class="blog-tile-tags">
-                  
-                    <span class="blog-tag">Zero Trust</span>
-                  
-                    <span class="blog-tag">Cybersecurity</span>
-                  
-                    <span class="blog-tag">IAM</span>
-                  
-                </div>
-                
-              </div>
-              
-              <div class="blog-tile-footer">
-                <span class="read-more">Read Full Article</span>
-              </div>
-            </a>
-            
-            <a class="blog-tile" href="/getting-started-with-cloud-migration/">
-              <div class="external-link" title="Read post">↗</div>
-              
-              <div class="blog-tile-image placeholder">
-                
-                  <img src="/assets/images/cloud-migration.jpg" alt="Getting Started with Cloud Migration" style="width:100%; height:100%; object-fit:cover; border-radius: 4px;">
-                
-              </div>
-              
-              <div class="blog-tile-content">
-                <div class="blog-tile-meta">
-                  <span class="blog-tile-date">
-                    <i class="fas fa-calendar-alt"></i> July 16, 2026
-                  </span>
-                  <span class="blog-tile-author">
-                    <i class="fas fa-user"></i> Cloud Commercial Holdings
-                  </span>
-                </div>
-                
-                <h3 class="blog-tile-title">Getting Started with Cloud Migration</h3>
-                <p class="blog-tile-excerpt">Learn the essential steps for successfully migrating your infrastructure to the cloud. This comprehensive guide covers planning, execution, and best practices for a smooth transition....</p>
-                
-                
-                <div class="blog-tile-tags">
-                  
-                    <span class="blog-tag">AWS</span>
-                  
-                    <span class="blog-tag">Azure</span>
-                  
-                    <span class="blog-tag">Cloud Strategy</span>
-                  
-                </div>
-                
-              </div>
-              
-              <div class="blog-tile-footer">
-                <span class="read-more">Read Full Article</span>
-              </div>
-            </a>
-            
-            <a class="blog-tile" href="/automation-solutions-for-devops/">
-              <div class="external-link" title="Read post">↗</div>
-              
-              <div class="blog-tile-image placeholder">
-                
-                  <img src="/assets/images/devops-automation.jpg" alt="Automation Solutions for DevOps" style="width:100%; height:100%; object-fit:cover; border-radius: 4px;">
-                
-              </div>
-              
-              <div class="blog-tile-content">
-                <div class="blog-tile-meta">
-                  <span class="blog-tile-date">
-                    <i class="fas fa-calendar-alt"></i> July 16, 2026
-                  </span>
-                  <span class="blog-tile-author">
-                    <i class="fas fa-user"></i> Cloud Commercial Holdings
-                  </span>
-                </div>
-                
-                <h3 class="blog-tile-title">Automation Solutions for DevOps</h3>
-                <p class="blog-tile-excerpt">Streamline your development and operations workflows with modern automation tools. Learn about Infrastructure as Code, CI/CD pipelines, and automated testing strategies.</p>
-                
-                
-                <div class="blog-tile-tags">
-                  
-                    <span class="blog-tag">CloudFormation</span>
-                  
-                    <span class="blog-tag">Pulumi</span>
-                  
-                    <span class="blog-tag">CI/CD</span>
-                  
-                </div>
-                
-              </div>
-              
-              <div class="blog-tile-footer">
-                <span class="read-more">Read Full Article</span>
-              </div>
-            </a>
-            
-            
+        <div
+            class="blog-grid"
+            id="blogGrid"
+            data-feed-url="https://cloudcommercialholdings.github.io/CCH-BLOGS/feed.xml"
+            data-blog-home="https://cloudcommercialholdings.github.io/CCH-BLOGS/"
+        >
+            <div class="loading-state">
+                <div class="loading-spinner"></div>
+                <p>Loading latest posts…</p>
+            </div>
         </div>
+
+        <p class="blog-source">
+            <a href="https://cloudcommercialholdings.github.io/CCH-BLOGS/">View all posts on the CCH blog</a>
+        </p>
     </div>
 </section>
+
 
   <footer class="site-footer">
     <div class="container footer-grid">
@@ -306,6 +196,8 @@
       <script src="/assets/main.js"></script>
     
       <script src="/assets/topbar-fix.js"></script>
+    
+      <script src="/assets/blog-feed.js"></script>
     
   
   

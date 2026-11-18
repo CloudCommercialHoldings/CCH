@@ -63,10 +63,11 @@ additional_js:
                         shape-rendering="geometricPrecision">HOLDINGS</text>
                 </g>
 
-                <foreignObject x="0" y="0" width="100%" height="100%" clip-path="url(#company-text-clip)">
+                <foreignObject x="0" y="0" width="7000" height="3000" clip-path="url(#company-text-clip)">
                     <div xmlns="http://www.w3.org/1999/xhtml" class="svg-clip-stack">
-                        <video class="svg-clip-video" autoplay muted loop playsinline preload="none"
-                            poster="/assets/ghanaflag.jpg" disablePictureInPicture disableRemotePlayback
+                        <img class="svg-clip-fill" src="{{ '/assets/ghanaflag.jpg' | relative_url }}" alt="" />
+                        <video class="svg-clip-video" autoplay muted loop playsinline preload="auto"
+                            poster="{{ '/assets/ghanaflag.jpg' | relative_url }}" disablePictureInPicture disableRemotePlayback
                             controlsList="nodownload nofullscreen noremoteplayback">
                             <source src="{{ '/assets/AccraGhanaClipped.mp4' | relative_url }}" type="video/mp4" />
                         </video>

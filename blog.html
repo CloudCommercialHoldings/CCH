@@ -10,64 +10,31 @@ additional_css:
 additional_js:
 - "/assets/main.js"
 - "/assets/topbar-fix.js"
+- "/assets/blog-feed.js"
 ---
 
-<!-- Blog Section -->
+<!-- Blog Section: tiles sync live from CCH-BLOGS/feed.xml -->
 <section class="blog-section section">
     <div class="container">
         <div class="blog-header">
             <h2 class="blog-title">Our Insights</h2>
-            <p class="blog-subtitle">Latest strategic thoughts on cloud governance, Zero Trust security, and
-                optimization</p>
+            <p class="blog-subtitle">Latest posts from the CCH blog on cloud, security, and engineering</p>
         </div>
 
-        <!-- Blog Post Grid -->
-        <div class="blog-grid">
-            {% for post in site.posts %}
-            <a class="blog-tile" href="{{ post.url | relative_url }}">
-              <div class="external-link" title="Read post">↗</div>
-              
-              <div class="blog-tile-image placeholder">
-                {% if post.image %}
-                  <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" style="width:100%; height:100%; object-fit:cover; border-radius: 4px;">
-                {% else %}
-                  <i class="fas fa-cloud"></i>
-                {% endif %}
-              </div>
-              
-              <div class="blog-tile-content">
-                <div class="blog-tile-meta">
-                  <span class="blog-tile-date">
-                    <i class="fas fa-calendar-alt"></i> {{ post.date | date: "%B %d, %Y" }}
-                  </span>
-                  <span class="blog-tile-author">
-                    <i class="fas fa-user"></i> {{ post.author | default: site.author }}
-                  </span>
-                </div>
-                
-                <h3 class="blog-tile-title">{{ post.title }}</h3>
-                <p class="blog-tile-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-                
-                {% if post.tags.size > 0 %}
-                <div class="blog-tile-tags">
-                  {% for tag in post.tags limit:3 %}
-                    <span class="blog-tag">{{ tag }}</span>
-                  {% endfor %}
-                </div>
-                {% endif %}
-              </div>
-              
-              <div class="blog-tile-footer">
-                <span class="read-more">Read Full Article</span>
-              </div>
-            </a>
-            {% endfor %}
-            {% if site.posts.size == 0 %}
-            <div class="empty-state">
-              <h3>No Blog Posts Yet</h3>
-              <p>Check back soon for insights on cloud technology and digital transformation!</p>
+        <div
+            class="blog-grid"
+            id="blogGrid"
+            data-feed-url="{{ site.blog_feed }}"
+            data-blog-home="{{ site.blog_home }}"
+        >
+            <div class="loading-state">
+                <div class="loading-spinner"></div>
+                <p>Loading latest posts…</p>
             </div>
-            {% endif %}
         </div>
+
+        <p class="blog-source">
+            <a href="{{ site.blog_home }}">View all posts on the CCH blog</a>
+        </p>
     </div>
 </section>

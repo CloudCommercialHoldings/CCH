@@ -350,14 +350,9 @@ body {
    VIDEO — disable on very small screens to save data
    ==================================================== */
 @media (max-width: 480px) {
-  /* Show poster image instead of video on iPhone */
+  /* Keep the flag fill; skip autoplay video on small screens */
   .svg-clip-video {
     display: none;
-  }
-
-  /* Replace with a gradient so the text clip still looks great */
-  .svg-clip-stack {
-    background: linear-gradient(135deg, #0d7a3e 0%, #006b3c 40%, #1a4a2e 100%);
   }
 
   .svg-clip-grad {

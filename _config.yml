@@ -5,6 +5,10 @@ description: Secure, compliant cloud strategy, migration, AI, and managed servic
 baseurl: ""
 url: "https://cloudcommercialholdings.github.io"
 
+# Live blog listing on /blog. Posts are not copied; the page reads this feed.
+blog_feed: "https://cloudcommercialholdings.github.io/CCH-BLOGS/feed.xml"
+blog_home: "https://cloudcommercialholdings.github.io/CCH-BLOGS/"
+
 # Exclude these files/directories from the Jekyll build
 exclude:
   - app/

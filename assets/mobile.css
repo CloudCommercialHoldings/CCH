@@ -48,36 +48,84 @@ body {
 }
 
 /* ====================================================
-   HERO SVG — scale clip text for small screens
+   HERO — iPhone / touch: SVG clip-path + foreignObject
+   is broken in iOS Safari. Use CSS text fill instead.
+   900px also covers iPhone landscape.
    ==================================================== */
-@media (max-width: 480px) {
+@media (max-width: 900px), (hover: none) and (pointer: coarse) {
   .hero-atriz {
     height: 100svh;
-    height: 100dvh; /* dynamic viewport height — key for iPhone with browser chrome */
+    height: 100dvh;
     --topbarH: 64px;
     padding-top: var(--topbarH);
+    overflow: hidden;
   }
 
   .hero-clip {
-    min-height: 0;
-    padding: 0 2vw;
+    width: 100%;
+    min-height: calc(100dvh - var(--topbarH) - 88px);
+    padding: 0 5.5vw;
+    align-items: center;
+    justify-content: flex-start;
   }
 
-  /* Scale down SVG text so it fits without overflow */
-  .svg-clip {
-    height: calc(100dvh - var(--topbarH) - 60px);
+  .hero-clip-svg {
+    width: 100%;
+  }
+
+  /* Do not keep the desktop SVG on iOS — it renders as hollow outlines */
+  .svg-clip,
+  .text-strokes,
+  .svg-clip-video {
+    display: none !important;
+  }
+
+  .hero-title {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    clip: auto;
+    overflow: visible;
+    white-space: normal;
+    border: 0;
+    display: block;
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 900;
+    width: 100%;
+    font-size: min(15.8vw, 92px);
+    line-height: 0.84;
+    letter-spacing: -0.055em;
+    text-transform: uppercase;
+    text-align: left;
+    background-image: url("ghanaflag.jpg");
+    background-size: 160% auto;
+    background-position: 28% 42%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12));
   }
 
   .scroll-cta {
-    bottom: clamp(60px, 8vh, 100px);
+    left: 5.5vw;
     right: 12px;
-    gap: 10px;
+    bottom: max(16px, calc(env(safe-area-inset-bottom) + 8px));
+    gap: 8px;
+    z-index: 3;
+    justify-content: space-between;
   }
 
   .scroll-tagline {
-    font-size: clamp(13px, 3.5vw, 17px);
-    padding: 8px 12px;
-    max-width: 55vw;
+    font-size: 12px;
+    padding: 8px 10px;
+    max-width: none;
+    flex: 1;
+    text-align: left;
   }
 }
 
@@ -346,16 +394,4 @@ body {
   }
 }
 
-/* ====================================================
-   VIDEO — disable on very small screens to save data
-   ==================================================== */
-@media (max-width: 480px) {
-  /* Keep the flag fill; skip autoplay video on small screens */
-  .svg-clip-video {
-    display: none;
-  }
-
-  .svg-clip-grad {
-    display: none;
-  }
-}
+/* Video in the SVG clip is already hidden on phones above. */
